@@ -77,7 +77,6 @@ aPackageInfo = [
 		"textures/valid.jpg",
 		"textures/WhitePiece.jpg",
 		"textures/WhitePieceCliked.jpg",
-		"textures/WhitePieceCliked11.jpg",
 		"Update.ring"
 	],
 	:ringfolderfiles = 	[
