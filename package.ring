@@ -1,6 +1,6 @@
 aPackageInfo = [
 	:name = "The Chess3d-Qt3D Package",
-	:description = "Our qt_3d_chess package using the Ring programming language",
+	:description = "Our Chess3d-Qt3D package using the Ring programming language",
 	:folder = "Chess3d-Qt3D",
 	:developer = "Azzeddine Remmal",
 	:email = "Azzeddine.Remmal@gmail.com",
