@@ -13,10 +13,7 @@ oApp = new qApp {
    exec()
 
  }
-
-
-
-
+ 
 //--------------------------
 func pRightClick()
   
@@ -144,7 +141,7 @@ func FrameAction()
 			
 			   next
 			//----------------------------
-			  anglePlanet      += 0.00005
+			  anglePlanet      += 0.0005
 			   PlanetPosx  = cos(anglePlanet)*500
 			   PlanetPosz  = sin(anglePlanet)*500
 			   PlanetPosy  = 50.0
