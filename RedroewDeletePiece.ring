@@ -4,18 +4,18 @@
 # Author : Azzeddine Remmal    
 #-------------------------------------------------
 
-###########################
+##########################################
 #-----Redrow Delete piece Function-------#
-###########################
+##########################################
 
 
 
 
-//-----------------Redrow piece------------------------------------
+//---------Redrow piece------------
 func redrowpiece(board, i, j)
 
 		
-			   //Redraws the correct piece.--------------------------------------
+			   //Redraws the correct piece.-----------
 			
 		 if board[i][j] = 'kr'
             okingw = new Model3d(WhitePEntity, okingw, "models/king.obj"){
@@ -276,43 +276,43 @@ func redrowpiece(board, i, j)
 
 
 
-	//---------------Delete piece--------------------------------------
+	//---------------Delete piece----------
     func deletepiece(board, i, j)
 
-							piece =board[i][j]
-		
-					if      piece = 'kr'   okingw.removecomponent()   
-					elseif piece = 'Kl'   okingb.removecomponent()   
-					elseif piece = 'qr'   oqueenw.removecomponent() 
-					elseif piece = 'Ql'   oqueenb.removecomponent()
-					elseif piece = 'br'   oBishopwr.removecomponent()
-					elseif piece = 'Br'   oBishopbr.removecomponent() 
-					elseif piece = 'bl'   oBishopwl.removecomponent() 
-					elseif piece = 'Bl'   oBishopbl.removecomponent() 
-					elseif piece = 'nr'   oknightwr.removecomponent() 
-					elseif piece = 'Nr'   oknightbr.removecomponent() 
-					elseif piece = 'nl'   oknightwl.removecomponent() 
-					elseif piece = 'Nl'   oknightbl.removecomponent() 
-					elseif piece = 'rr'    orookwr.removecomponent()  
-					elseif piece = 'Rr'   orookbr.removecomponent()  
-					elseif piece = 'rl'    orookwl.removecomponent() 
-					elseif piece = 'Rl'   orookbl.removecomponent() 
-					elseif piece = 'p1'   opawnw1.removecomponent()
-					elseif piece = 'P1'   opawnb1.removecomponent() 	
-					elseif piece = 'p2'   opawnw2.removecomponent() 	
-					elseif piece = 'P2'   opawnb2.removecomponent() 
-					elseif piece = 'p3'   opawnw3.removecomponent() 
-					elseif piece = 'P3'   opawnb3.removecomponent() 
-					elseif piece = 'p4'   opawnw4.removecomponent() 
-					elseif piece = 'P4'   opawnb4.removecomponent() 
-					elseif piece = 'p5'   opawnw5.removecomponent()
-					elseif piece = 'P5'   opawnb5.removecomponent() 
-					elseif piece = 'p6'   opawnw6.removecomponent() 
-					elseif piece = 'P6'   opawnb6.removecomponent() 
-					elseif piece = 'p7'   opawnw7.removecomponent() 
-					elseif piece = 'P7'   opawnb7.removecomponent() 
-					elseif piece = 'p8'   opawnw8.removecomponent() 
-					elseif piece = 'P8'   opawnb8.removecomponent()  
-					ok
+			piece =board[i][j]
+
+			if      piece = 'kr'   okingw.removecomponent()   
+			elseif piece = 'Kl'   okingb.removecomponent()   
+			elseif piece = 'qr'   oqueenw.removecomponent() 
+			elseif piece = 'Ql'   oqueenb.removecomponent()
+			elseif piece = 'br'   oBishopwr.removecomponent()
+			elseif piece = 'Br'   oBishopbr.removecomponent() 
+			elseif piece = 'bl'   oBishopwl.removecomponent() 
+			elseif piece = 'Bl'   oBishopbl.removecomponent() 
+			elseif piece = 'nr'   oknightwr.removecomponent() 
+			elseif piece = 'Nr'   oknightbr.removecomponent() 
+			elseif piece = 'nl'   oknightwl.removecomponent() 
+			elseif piece = 'Nl'   oknightbl.removecomponent() 
+			elseif piece = 'rr'    orookwr.removecomponent()  
+			elseif piece = 'Rr'   orookbr.removecomponent()  
+			elseif piece = 'rl'    orookwl.removecomponent() 
+			elseif piece = 'Rl'   orookbl.removecomponent() 
+			elseif piece = 'p1'   opawnw1.removecomponent()
+			elseif piece = 'P1'   opawnb1.removecomponent() 	
+			elseif piece = 'p2'   opawnw2.removecomponent() 	
+			elseif piece = 'P2'   opawnb2.removecomponent() 
+			elseif piece = 'p3'   opawnw3.removecomponent() 
+			elseif piece = 'P3'   opawnb3.removecomponent() 
+			elseif piece = 'p4'   opawnw4.removecomponent() 
+			elseif piece = 'P4'   opawnb4.removecomponent() 
+			elseif piece = 'p5'   opawnw5.removecomponent()
+			elseif piece = 'P5'   opawnb5.removecomponent() 
+			elseif piece = 'p6'   opawnw6.removecomponent() 
+			elseif piece = 'P6'   opawnb6.removecomponent() 
+			elseif piece = 'p7'   opawnw7.removecomponent() 
+			elseif piece = 'P7'   opawnb7.removecomponent() 
+			elseif piece = 'p8'   opawnw8.removecomponent() 
+			elseif piece = 'P8'   opawnb8.removecomponent()  
+			ok
 
 
