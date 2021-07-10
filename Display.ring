@@ -4,9 +4,9 @@
 # Author : Azzeddine Remmal    
 #-------------------------------------------------
 
-####################
+###############################
 #-----class DisplayGame-------#
-####################
+###############################
 
 class DisplayGame
 
@@ -90,7 +90,7 @@ func DrowCamera()
 
    oCamController = new QFirstPersonCameraController(oRootEntity){
                      setCamera(oCameraEntity)
-                     //setEnabled(False)
+                     setEnabled(False)
                      }
 
 //--------------------------
@@ -99,15 +99,15 @@ func DrowSkyboxs()
 			//--------------------- choose one ------- Skybox  drawing --------------
 			//----------- Skybox Blue -----------
 			// DrowSkyBox(oRootEntity , "textures\skybox" ,"SpaceBlue_negx.png" , "SpaceBlue_negy.png" , "SpaceBlue_negz.png" , 
-			//													"SpaceBlue_posx.png" , "SpaceBlue_posy.png" , "SpaceBlue_posz.png" )
+			//					"SpaceBlue_posx.png" , "SpaceBlue_posy.png" , "SpaceBlue_posz.png" )
 			
 			//----------- Skybox Lightblue ----------
 			//	 DrowSkyBox(oRootEntity , "textures\skybox" ,"SpaceLightblue_negx.png" , "SpaceLightblue_negy.png" , "SpaceLightblue_negz.png" , 
-			//										"SpaceLightblue_posx.png" , "SpaceLightblue_posy.png" , "SpaceLightblue_posz.png" )
+			//					"SpaceLightblue_posx.png" , "SpaceLightblue_posy.png" , "SpaceLightblue_posz.png" )
 		
 			//-----------Skybox Red  ------------	
 			 DrowSkyBox(oRootEntity , "textures\skybox" ,"SpaceRed_negx.png" , "SpaceRed_negy.png" , "SpaceRed_negz.png" ,
-													"SpaceRed_posx.png" , "SpaceRed_posy.png" , "SpaceRed_posz.png" )
+								"SpaceRed_posx.png" , "SpaceRed_posy.png" , "SpaceRed_posz.png" )
 		 		  
 
 //--------------------------------
@@ -135,9 +135,9 @@ func DrowTiles()
                                     setmeshresolution(new qSize(10,10))
                             	  }
          aTile[i][j][:oTileTransform] = new  QTransform(aTile[i][j][:oTile]){
-                                             setTranslation(new QVector3D(i*TILE_SIZE-76, 0.1, j*TILE_SIZE-76))
-											 oQ = new QQuaternion(0,0,0,0)
-									       SetRotation(oQ.FromAxisAndAngle(new QVector3D(0, 1, 0), 180))
+                                           setTranslation(new QVector3D(i*TILE_SIZE-76, 0.1, j*TILE_SIZE-76))
+					   oQ = new QQuaternion(0,0,0,0)
+					   SetRotation(oQ.FromAxisAndAngle(new QVector3D(0, 1, 0), 180))
                                       	  }
          aTile[i][j][:oLoader] = new  QTextureLoader(aTile[i][j][:oTile])
          aTile[i][j][:oTileMaterial] = new QTextureMaterial(aTile[i][j][:oTile]){
@@ -151,9 +151,10 @@ func DrowTiles()
                                           addComponent(aTile[i][j][:oTileMaterial])
                                           addComponent(aTile[i][j][:oTileTransform])
                                           addComponent(aTile[i][j][:oPicker ])
-                                   		 }
+                                   	 }
 
 	  DrowPiece(i,j)
+	  
  	next
  next
 
@@ -176,7 +177,7 @@ func DrowPiece(i,j)
             okingw = new Model3d(WhitePEntity, okingw, "models/king.obj"){
 					            setModelpos(i*17-75, 0, (j*17-42)-33)
 					            setmodelSiz(0.19, 0.20, 0.19)
-					          	SetModelTexture("textures/WhitePiece.jpg")
+					            SetModelTexture("textures/WhitePiece.jpg")
 					            setModelDirection( 0, 1, 0, degreeW)
 								}
          ok
@@ -498,17 +499,17 @@ func DrowLight()
       aLight[n] = []
 
          aLight[n][:oLight] = new QPointLight(aLight[n][:LightEntity]){
-                                 setColor(White)
-                                 setIntensity(1)
-                           }
+                              setColor(White)
+                              setIntensity(1)
+                              }
 
          aLight[n][:oLightTransform] = new QTransform(aLight[n][:oLightEntity]){
-                                          setTranslation(new QVector3D(random()%500-(100),random()%-100-(10), random()%500-(100)))
+                                       setTranslation(new QVector3D(random()%500-(100),random()%-100-(10), random()%500-(100)))
                                        }
 
          aLight[n][:oLightEntity]  = new QEntity(oRootEntity){
-                                          addComponent(aLight[n][:oLight])
-                                          addComponent(aLight[n][:oLightTransform])
+                                    addComponent(aLight[n][:oLight])
+                                    addComponent(aLight[n][:oLightTransform])
                                     }
    next
 
@@ -525,22 +526,22 @@ func DrawStars()
                                setRadius(1.0)
                                setRings(100)
                                setSlices(20)
-                           }
-
+			       }
+	
       aStars[n][:oStarsMaterial] = new QPhongMaterial(aStars[n][:oStars]){
-                                       setDiffuse(White)
+                                   setDiffuse(White)
                                    }
 
       aStars[n][:oStarsTransform] = new  QTransform(aStars[n][:oStarsEntity]){
-                                         setScale(1)
-                                         setTranslation(new QVector3D(random()%1000-(500),random()%-100-(-20), random()%1000-(500)))
+                                    setScale(1)
+                                     setTranslation(new QVector3D(random()%1000-(500),random()%-100-(-20), random()%1000-(500)))
                                     }
 
       aStars[n][:oStarsEntity] = new QEntity(oRootEntity){
                                      addComponent(aStars[n][:oStars])
                                      addComponent(aStars[n][:oStarsmaterial])
                                      addComponent(aStars[n][:oStarsTransform])
-                                 }
+                                     }
 
    next
 
@@ -561,26 +562,26 @@ func DrowPlanets()
                                     setRadius(1.0)
                                     setRings(100)
                                     setSlices(20)
-                              }
+                             	     }
 
       aPlanets[n][:oTextureLoader] = new  QTextureLoader(aPlanets[n][:oPlanets]){
                                           setSource(new QUrl("file:///"+currentdir()+TextPlan) )
-                                    }
+                                   	 }
 
       aPlanets[n][:oPlanetsMaterial] = new QTextureMaterial(aPlanets[n][:oPlanets]){
                                            setTexture(aPlanets[n][:oTextureLoader])
-                                       }
+					   }
 
       aPlanets[n][:oPlanetsTransform] = new  QTransform(aPlanets[n][:oPlanetsEntity]){
                                              setScale(70)
                                              setTranslation(new QVector3D(random()%1000-(900),random()%100-(-100), random()%1000-(900)))
-                                        }
+                                       	    }
 
       aPlanets[n][:oPlanetsEntity] = new QEntity(oRootEntity){
                                           addComponent(aPlanets[n][:oPlanets])
                                           addComponent(aPlanets[n][:oPlanetsmaterial])
                                           addComponent(aPlanets[n][:oPlanetsTransform])
-                                     }
+                                         }
    next
 
 
@@ -588,27 +589,27 @@ func DrowPlanets()
 func drowlogo()
 
 		 	ologo = new  QPlaneMesh(oRootEntity){
-									setHeight(10)
-									setWidth(10)
-									setmeshresolution(new qSize(10,10))
+							setHeight(10)
+							setWidth(10)
+							setmeshresolution(new qSize(10,10))
 					                }
 			ologo_Transform = new  QTransform(ologo){
-									setScale(13.6)
-									setTranslation(new QVector3D(0, 0.03, 0))
-									 oQ = new QQuaternion(0,0,0,0)
-									SetRotation(oQ.FromAxisAndAngle(new QVector3D(0, -1,0), 270))
-									}
+							setScale(13.6)
+							setTranslation(new QVector3D(0, 0.03, 0))
+							 oQ = new QQuaternion(0,0,0,0)
+							SetRotation(oQ.FromAxisAndAngle(new QVector3D(0, -1,0), 270))
+							}
 			oTextureLoader = new  QTextureLoader(ologo){
-									setSource(new QUrl("file:///"+currentdir() + "/textures/chess1.png" ) )
-									}
+							setSource(new QUrl("file:///"+currentdir() + "/textures/chess1.png" ) )
+							}
 			ologo_Material = new QTextureMaterial(ologo){
-									setTexture(oTextureLoader)
-									}
+							setTexture(oTextureLoader)
+							}
 			ologo_Entity = new QEntity(oRootEntity){
-									addComponent(ologo)
-									addComponent(ologo_Material)
-									addComponent(ologo_Transform)
-								    }
+							addComponent(ologo)
+							addComponent(ologo_Material)
+							addComponent(ologo_Transform)
+						       }
 		
 
 //---------------------------- Draws the board --------------------------
@@ -619,11 +620,6 @@ func DrowBoard()
                   setmodelpos(0, 0, 0)
                   SetModelDirection(0,1,0,degreeW)
                   SetModelTexture("textures/chessboard_wood.jpg")
-				SetModelDirection( 0, 1, 0, 90)
-            }
+		  SetModelDirection( 0, 1, 0, 90)
+                 }
 
-
-
-
- 	   
-//-----------------------------------------
