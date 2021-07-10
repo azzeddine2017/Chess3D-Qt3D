@@ -1,3 +1,8 @@
+#------------------------------------------------
+# Chess3d Qt3D
+#   
+# Author :Azzeddine Remmal 
+#-------------------------------------------------
 # The Library File
 
 Load "guilib.ring"
