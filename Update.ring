@@ -41,7 +41,12 @@ func Update()
 
          ok
 			
-
+	 if selectionI >0 and selectionJ >0
+	                  	
+		if validMove(board, selectionI, selectionJ, i, j, turn)
+			 aTile[i][j][:oLoader].setSource(new QUrl("file:///"+currentdir()+"/textures/valid.png") )	
+		ok
+	 ok
 			
       // Draws a game piece.
       piece = board[i][j]
