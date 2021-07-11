@@ -15,12 +15,12 @@ aPackageInfo = [
 	],
 	:libs = 	[
 		[
-			:name = "ringqt.ring",
+			:name = "ringqt",
 			:version = "1.0.8",
 			:providerusername = "ringpackages"
 		],
 		[
-			:name = "stdlib.ring",
+			:name = "stdlib",
 			:version = "1.0.0",
 			:providerusername = "ringpackages"
 		]
