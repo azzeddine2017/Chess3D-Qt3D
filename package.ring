@@ -15,12 +15,12 @@ aPackageInfo = [
 	],
 	:libs = 	[
 		[
-			:name = "guilib.ring",
+			:name = "ringqt.ring",
 			:version = "1.0.8",
 			:providerusername = "ringpackages"
 		],
 		[
-			:name = "stdlibCore.ring",
+			:name = "stdlib.ring",
 			:version = "1.0.0",
 			:providerusername = "ringpackages"
 		]
@@ -112,7 +112,7 @@ aPackageInfo = [
 	:macosringfolderfiles = 	[
 
 	],
-	:run = "Qt3d_Chess.ring",
+	:run = "ring Qt3d_Chess.ring",
 	:windowsrun = "",
 	:linuxrun = "",
 	:macosrun = "",
