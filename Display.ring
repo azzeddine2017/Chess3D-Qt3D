@@ -588,28 +588,32 @@ func DrowPlanets()
 // ------  draw logo------------
 func drowlogo()
 
-		 	ologo = new  QPlaneMesh(oRootEntity){
+	ologo = new  QPlaneMesh(oRootEntity){
 							setHeight(10)
 							setWidth(10)
 							setmeshresolution(new qSize(10,10))
-					                }
-			ologo_Transform = new  QTransform(ologo){
+					}
+	ologo_Transform = new  QTransform(ologo){
 							setScale(13.6)
-							setTranslation(new QVector3D(0, 0.03, 0))
+							setTranslation(new QVector3D(0, 0.15, 0))
 							 oQ = new QQuaternion(0,0,0,0)
 							SetRotation(oQ.FromAxisAndAngle(new QVector3D(0, -1,0), 270))
 							}
-			oTextureLoader = new  QTextureLoader(ologo){
+	oTextureLoader = new  QTextureLoader(ologo){
 							setSource(new QUrl("file:///"+currentdir() + "/textures/chess1.png" ) )
 							}
-			ologo_Material = new QTextureMaterial(ologo){
+	ologo_Material = new QTextureMaterial(ologo){
 							setTexture(oTextureLoader)
 							}
-			ologo_Entity = new QEntity(oRootEntity){
+	ologo_Picker = new qObjectPicker(ologo){
+			     setclickedevent("DeliteAdd()")
+								  }
+	ologo_Entity = new QEntity(oRootEntity){
 							addComponent(ologo)
+							addComponent(ologo_Picker)
 							addComponent(ologo_Material)
 							addComponent(ologo_Transform)
-						       }
+						    }
 		
 
 //---------------------------- Draws the board --------------------------
