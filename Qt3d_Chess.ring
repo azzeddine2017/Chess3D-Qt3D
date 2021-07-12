@@ -54,7 +54,12 @@ func MouseRelease()
 
   			 mouseRightClick=false
 
-
+//----------------
+func DeliteAdd()
+		ologo_Entity.removeComponent(ologo)
+		ologo_Entity.removeComponent(ologo_Picker)
+		ologo_Entity.removeComponent(ologo_Material)
+		ologo_Entity.removeComponent(ologo_Transform)		
 
 //---------------------------------
 func pKeyPress()
