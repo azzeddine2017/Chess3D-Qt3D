@@ -69,7 +69,7 @@ func StartNewGame()
 			 DrowPlanets()
 			 DrowLight()
  			 DrowSkyboxs()			 
-			 Drowlogo()		 		  
+			// Drowlogo()		 		  
 			 DrowBoard()  
 			 DrowTest3D() 
 			 DrowTiles()
@@ -587,7 +587,7 @@ func DrowPlanets()
 
 
 // ------  draw logo------------
-func drowlogo()
+/*func drowlogo()
 
 	ologo = new  QPlaneMesh(oRootEntity){
 							setHeight(10)
@@ -615,7 +615,7 @@ func drowlogo()
 							addComponent(ologo_Material)
 							addComponent(ologo_Transform)
 						    }
-		
+*/		
 
 //---------------------------- Draws the board --------------------------
 func DrowBoard()
