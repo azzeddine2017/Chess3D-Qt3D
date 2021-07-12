@@ -73,6 +73,7 @@ func StartNewGame()
 			 DrowBoard()  
 			 DrowTest3D() 
 			 DrowTiles()
+			 Update()
 			 oView.setRootEntity(oRootEntity)
 		
 			
