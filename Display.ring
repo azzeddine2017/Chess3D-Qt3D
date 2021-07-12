@@ -83,10 +83,10 @@ func DrowCamera()
    
     oCameraEntity{
        lens().setPerspectiveProjection(45, 16/9, 0.1, 10000)
-       setPosition(new QVector3D(-190, 100, 0))
-       setUpVector(new QVector3D(0, 10, 0))
+       setPosition(new QVector3D(-190, 100, 50))
+       setUpVector(new QVector3D(0, 20, 0))
        setViewCenter(new QVector3D(0, 20, 0))
-       viewSphere(new QVector3D(0, 20, 0),65)
+       viewSphere(new QVector3D(0, 15, 0),65)
       }
 
    oCamController = new QFirstPersonCameraController(oRootEntity){
