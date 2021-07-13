@@ -65,8 +65,8 @@ func StartNewGame()
 			 turn = 'a'
 			 SayText(MSG_WELCOME)
 			 DrowCamera()
-			 DrawStars()    
-			 DrowPlanets()
+			 //DrawStars()    
+			// DrowPlanets()
 			 DrowLight()
  			 DrowSkyboxs()			 
 			// Drowlogo()		 		  
@@ -83,7 +83,7 @@ func DrowCamera()
    
     oCameraEntity{
        lens().setPerspectiveProjection(45, 16/9, 0.1, 10000)
-       setPosition(new QVector3D(-190, 100, 50))
+       setPosition(new QVector3D(-30, 80, 90))
        setUpVector(new QVector3D(0, 20, 0))
        setViewCenter(new QVector3D(0, 20, 0))
        viewSphere(new QVector3D(0, 15, 0),65)
@@ -103,12 +103,12 @@ func DrowSkyboxs()
 			//					"SpaceBlue_posx.png" , "SpaceBlue_posy.png" , "SpaceBlue_posz.png" )
 			
 			//----------- Skybox Lightblue ----------
-			//	 DrowSkyBox(oRootEntity , "textures\skybox" ,"SpaceLightblue_negx.png" , "SpaceLightblue_negy.png" , "SpaceLightblue_negz.png" , 
-			//					"SpaceLightblue_posx.png" , "SpaceLightblue_posy.png" , "SpaceLightblue_posz.png" )
+				 DrowSkyBox(oRootEntity , "textures\skybox" ,"SpaceLightblue_negx.png" , "SpaceLightblue_negy.png" , "SpaceLightblue_negz.png" , 
+								"SpaceLightblue_posx.png" , "SpaceLightblue_posy.png" , "SpaceLightblue_posz.png" )
 		
 			//-----------Skybox Red  ------------	
-			 DrowSkyBox(oRootEntity , "textures\skybox" ,"SpaceRed_negx.png" , "SpaceRed_negy.png" , "SpaceRed_negz.png" ,
-								"SpaceRed_posx.png" , "SpaceRed_posy.png" , "SpaceRed_posz.png" )
+			// DrowSkyBox(oRootEntity , "textures\skybox" ,"SpaceRed_negx.png" , "SpaceRed_negy.png" , "SpaceRed_negz.png" ,
+			//					"SpaceRed_posx.png" , "SpaceRed_posy.png" , "SpaceRed_posz.png" )
 		 		  
 
 //--------------------------------
