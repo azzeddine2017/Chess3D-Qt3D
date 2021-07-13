@@ -92,14 +92,14 @@ func pKeyPress()
 func  MsgWhite(MSG)
 
 		   otext3d{
-		            setText3D(MSG,50)
+		            setText3D(MSG,40)
 		            SetTextColor(white)
 		   }
 //---------------------------
 func  MsgBlack(MSG)
 
 		   otext3d{
-		            setText3D(MSG,50)
+		            setText3D(MSG,40)
 		            SetTextColor(Brown)
 		   }
 
@@ -152,7 +152,7 @@ func FrameAction()
 				
 			   ok
 			//---------------------------
-			   for u =1 to len(aPlanets)
+			/*   for u =1 to len(aPlanets)
 			      angpl+=0.0095
 			      if angpl >=360  angpl = 0  ok
 			
@@ -166,7 +166,7 @@ func FrameAction()
 			   PlanetPosz  = sin(anglePlanet)*500
 			   PlanetPosy  = 50.0
 			   aPlanets[1][:oPlanetsTransform].setTranslation(new QVector3D(PlanetPosx , PlanetPosy , PlanetPosz))
-			
+			*/
 			   if mouseRightClick  pRightClick()  ok
 			
 				
@@ -291,7 +291,7 @@ func validMove(board, fromI, fromJ, toI, toJ, turn)
 				ok
 			    // ----------Any knight-------------
 			    if  piece = 'Nr' or  piece = 'nr' or  piece = 'Nl' or  piece = 'nl' 
-			        	if  not (dx = 1 and dy = 2) or (dx = 2 and dy = 1) return false ok			    
+			        	if  not ((dx = 1 and dy = 2) or (dx = 2 and dy = 1)) return false ok			    
 				ok
 			    // ----------Any bishop------------
 			    if  piece = 'Br' or   piece = 'br' or  piece = 'Bl' or  piece = 'bl' 
