@@ -71,14 +71,14 @@ Class Text3D
 						if CamX > 0 
 			
 								 	if Camturn
-												 TextposZ =-60 
-												 SetTextDirection(90) 
-												TextposX=210
+												 TextposZ =-190 
+												 SetTextDirection(160) 
+												TextposX=40
 												
 									else 
-												TextposZ =60
-												 SetTextDirection(270) 
-												TextposX=-190
+												TextposZ =190
+												 SetTextDirection(-20) 
+												TextposX=-40
 						
 									ok
 									Transform.setTranslation(new QVector3D( TextposX, TextposY, TextposZ))
@@ -86,14 +86,14 @@ Class Text3D
 						else
 
 									 if Camturn 
-											TextposZ =60
-											 SetTextDirection(270) 
-											TextposX=-190
+											TextposZ =190
+											 SetTextDirection(-20) 
+											TextposX=-40
 										
 									else 
-											TextposZ =-60 
-											SetTextDirection(90)
-											TextposX=210
+											TextposZ =-190 
+											SetTextDirection(160)
+											TextposX=40
 									ok
 							Transform.setTranslation(new QVector3D( TextposX, TextposY, TextposZ))
 							
