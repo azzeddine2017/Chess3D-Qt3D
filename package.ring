@@ -5,11 +5,11 @@ aPackageInfo = [
 	:developer = "Azzeddine Remmal",
 	:email = "Azzeddine.Remmal@gmail.com",
 	:license = "MIT License",
-	:version = "1.0.0",
+	:version = "1.0.1",
 	:ringversion = "1.14",
 	:versions = 	[
 		[
-			:version = "1.0.0",
+			:version = "1.0.1",
 			:branch = "master"
 		]
 	],
@@ -44,9 +44,6 @@ aPackageInfo = [
 		"Text3D.ring",
 		"textures/BlackPiece.jpg",
 		"textures/BlackPieceCliked.jpg",
-		"textures/chess.jpg",
-		"textures/chess.png",
-		"textures/chess1.png",
 		"textures/chessboard_wood.jpg",
 		"textures/darkWood.jpg",
 		"textures/Leem.jpg",
@@ -74,7 +71,7 @@ aPackageInfo = [
 		"textures/skybox/SpaceRed_posx.png",
 		"textures/skybox/SpaceRed_posy.png",
 		"textures/skybox/SpaceRed_posz.png",
-		"textures/valid.jpg",
+		"textures/valid.png",
 		"textures/WhitePiece.jpg",
 		"textures/WhitePieceCliked.jpg",
 		"Update.ring"
