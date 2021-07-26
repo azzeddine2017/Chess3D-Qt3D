@@ -178,7 +178,7 @@ func HandleNewSelection( i, j)
 		   piece = board[i][j]
 		
 		   // ---------Selecting own turn's piece.----------
-		   if    piece != ' '  and  ((iswhitepiece(piece) and turn = 'a') or (isblackpiece(piece) and turn = 'A'))
+		   if    piece != ' '  and  ((iswhitepiece(piece) and turn = 'W') or (isblackpiece(piece) and turn = 'B'))
 		
 						      selectionI = i
 						      selectionJ = j
@@ -196,21 +196,21 @@ func HandleNewSelection( i, j)
 								board[selectionI][selectionJ] = ' '	
 						         selectionI = 0
 						         selectionJ = 0	
-						      if turn = 'a'
-						                if isCheckMate(board, 'A')
+						      if turn = 'W'
+						                if isCheckMate(board, 'B')
 						                   MsgWhite(MSG_WIN)
 						                   MsgBlack( MSG_LOSE)									
 							            else
-							               turn = 'A'            
+							               turn = 'B'            
 							               MsgBlack(MSG_YOUR_TURN)
 											Camturn = true		
 							            ok				
 						  		else
-								         if isCheckMate(board, 'a')
+								         if isCheckMate(board, 'W')
 								             MsgWhite( MSG_LOSE)
 								             MsgBlack( MSG_WIN)						    		
 								         else
-								             turn = 'a'
+								             turn = 'W'
 								             MsgWhite( MSG_YOUR_TURN)
 								              Camturn = true	
 								         ok				
@@ -218,13 +218,13 @@ func HandleNewSelection( i, j)
 					 else				
 							      if isCheck(board, turn)
 		
-									         if turn = 'a'
+									         if turn = 'W'
 									            MsgWhite(MSG_CHECK)
 									         else										
 									            MsgBlack(MSG_CHECK)
 									         ok								
 							      else				
-									         if turn = 'a'
+									         if turn = 'W'
 									            MsgWhite(MSG_INVALID)
 									         else
 									            MsgBlack(MSG_INVALID)
@@ -347,7 +347,7 @@ func isCheck( board, player)
 	
 			    for  i = 1 to 8
 				        for   j = 1 to 8					 
-					            if  (player = 'A' and board[i][j] = 'kr' ) or (player = 'a' and board[i][j] = 'Kl' )
+					            if  (player = 'W' and board[i][j] = 'kr' ) or (player = 'B' and board[i][j] = 'Kl' )
 					                kingI = i 
 					                kingJ = j 
 					            ok
@@ -361,12 +361,12 @@ func isChecke( board, player, kingI, kingJ)
 	
 			  for  i = 1 to 8
 			       for  j = 1 to 8
-			            if player = 'A' and  iswhitepiece(board[i][j])
-				                  if validMove(board, i, j, kingI, kingJ, 'a') 
+			            if player = 'W' and  iswhitepiece(board[i][j])
+				                  if validMove(board, i, j, kingI, kingJ, 'B') 
 										 return  true  
 								  ok			            
-			           	 elseif  player = 'a' and isblackpiece(board[i][j]) 
-				               if validMove(board, i, j, kingI, kingJ, 'A')   
+			           	 elseif  player = 'B' and isblackpiece(board[i][j]) 
+				               if validMove(board, i, j, kingI, kingJ, 'W')   
 										 return  true 
 								   ok
 			             ok
@@ -380,7 +380,7 @@ func isCheckMate( board, player)
 			     
 			    for  i = 1 to 8
 			        for  j = 1 to 8						
-			            if (player = 'a' and board[i][j] = 'kr') or (player = 'A' and board[i][j] = 'Kl')
+			            if (player = 'B' and board[i][j] = 'kr') or (player = 'W' and board[i][j] = 'Kl')
 			                kingI = i 
 			                kingJ = j 
 			            ok
@@ -395,8 +395,8 @@ func isCheckMate( board, player)
 				     newKingI = kingI + i   
 				     newKingJ = kingJ + j   					
 				    if  newKingI < 1 or newKingI > 8 or  newKingJ < 1 or newKingJ > 8   loop ok
-				    if player = 'A' and  isblackpiece(board[newKingI][newKingJ])    loop ok
-				    if player = 'a' and  iswhitepiece(board[newKingI][newKingJ])    loop ok					
+				    if player = 'W' and  isblackpiece(board[newKingI][newKingJ])    loop ok
+				    if player = 'B' and  iswhitepiece(board[newKingI][newKingJ])    loop ok					
 				     temp = board[newKingI][newKingJ]
 				    board[newKingI][newKingJ] = king					
 				    if isChecke(board, player, newKingI, newKingJ)  nonChecks++ ok					
