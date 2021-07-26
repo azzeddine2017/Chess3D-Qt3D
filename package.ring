@@ -5,11 +5,11 @@ aPackageInfo = [
 	:developer = "Azzeddine Remmal",
 	:email = "Azzeddine.Remmal@gmail.com",
 	:license = "MIT License",
-	:version = "1.0.1",
+	:version = "1.0.2",
 	:ringversion = "1.14",
 	:versions = 	[
 		[
-			:version = "1.0.1",
+			:version = "1.0.2",
 			:branch = "master"
 		]
 	],
@@ -72,6 +72,8 @@ aPackageInfo = [
 		"textures/skybox/SpaceRed_posy.png",
 		"textures/skybox/SpaceRed_posz.png",
 		"textures/valid.png",
+		"textures/friend.png",
+		"textures/enemy.png",
 		"textures/WhitePiece.jpg",
 		"textures/WhitePieceCliked.jpg",
 		"Update.ring"
