@@ -62,7 +62,7 @@ class DisplayGame
 
 
 func StartNewGame()
-			 turn = 'a'
+			 turn = 'W'
 			 SayText(MSG_WELCOME)
 			 DrowCamera()
 			 //DrawStars()    
