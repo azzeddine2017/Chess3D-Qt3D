@@ -380,7 +380,7 @@ func isCheckMate( board, player)
 			     
 			    for  i = 1 to 8
 			        for  j = 1 to 8						
-			            if (player = 'A' and board[i][j] = 'kr') or (player = 'a' and board[i][j] = 'Kl')
+			            if (player = 'a' and board[i][j] = 'kr') or (player = 'A' and board[i][j] = 'Kl')
 			                kingI = i 
 			                kingJ = j 
 			            ok
@@ -391,17 +391,17 @@ func isCheckMate( board, player)
 			
 			    nonChecks = 0
 			    for  i = -1 to 2
-				        for j = -1 to 2
-					             newKingI = kingI + i   
-					             newKingJ = kingJ + j   					
-					            if  newKingI < 1 or newKingI > 8 or  newKingJ < 1 or newKingJ > 8   loop ok
-					            if player = 'a' and  isblackpiece(board[newKingI][newKingJ])    loop ok
-					            if player = 'A' and  iswhitepiece(board[newKingI][newKingJ])    loop ok					
-					             temp = board[newKingI][newKingJ]
-					            board[newKingI][newKingJ] = king					
-					            if not isChecke(board, player, newKingI, newKingJ)  nonChecks++ ok					
-					            board[newKingI][newKingJ] = temp									
-				        next
+				for j = -1 to 2
+				     newKingI = kingI + i   
+				     newKingJ = kingJ + j   					
+				    if  newKingI < 1 or newKingI > 8 or  newKingJ < 1 or newKingJ > 8   loop ok
+				    if player = 'A' and  isblackpiece(board[newKingI][newKingJ])    loop ok
+				    if player = 'a' and  iswhitepiece(board[newKingI][newKingJ])    loop ok					
+				     temp = board[newKingI][newKingJ]
+				    board[newKingI][newKingJ] = king					
+				    if isChecke(board, player, newKingI, newKingJ)  nonChecks++ ok					
+				    board[newKingI][newKingJ] = temp									
+				next
 			    next			
 			    board[kingI][kingJ] = king
 				
