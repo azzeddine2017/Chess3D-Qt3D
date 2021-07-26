@@ -48,22 +48,22 @@ func Update()
 								 aTile[i][j][:oLoader].setSource(new QUrl("file:///"+currentdir()+"/textures/valid.png") )	
 						ok
 				
-				elseif iswhitepiece(board[i][j]) and turn = 'a'
+				elseif iswhitepiece(board[i][j]) and turn = 'B'
 						if validMove(board, selectionI, selectionJ, i, j, turn)
 								 aTile[i][j][:oLoader].setSource(new QUrl("file:///"+currentdir()+"/textures/enemy.png") )	
 						ok
 				
-				elseif isblackpiece(board[i][j]) and turn = 'A'
+				elseif isblackpiece(board[i][j]) and turn = 'W'
 						if validMove(board, selectionI, selectionJ, i, j, turn)
 								 aTile[i][j][:oLoader].setSource(new QUrl("file:///"+currentdir()+"/textures/enemy.png") )	
 						ok
 				
-				elseif iswhitepiece(board[i][j]) and turn = 'A'
+				elseif iswhitepiece(board[i][j]) and turn = 'W'
 						if validMove(board, selectionI, selectionJ, i, j, turn)	
 								 aTile[i][j][:oLoader].setSource(new QUrl("file:///"+currentdir()+"/textures/friend.png") )	
 						ok
 				
-				elseif isblackpiece(board[i][j]) and turn = 'a'
+				elseif isblackpiece(board[i][j]) and turn = 'B'
 							if validMove(board, selectionI, selectionJ, i, j, turn)
 								 aTile[i][j][:oLoader].setSource(new QUrl("file:///"+currentdir()+"/textures/friend.png") )	
 							ok
