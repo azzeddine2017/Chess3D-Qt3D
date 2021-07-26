@@ -347,7 +347,7 @@ func isCheck( board, player)
 	
 			    for  i = 1 to 8
 				        for   j = 1 to 8					 
-					            if  (player = 'a' and board[i][j] = 'kr' ) or (player = 'A' and board[i][j] = 'Kl' )
+					            if  (player = 'A' and board[i][j] = 'kr' ) or (player = 'a' and board[i][j] = 'Kl' )
 					                kingI = i 
 					                kingJ = j 
 					            ok
@@ -361,12 +361,12 @@ func isChecke( board, player, kingI, kingJ)
 	
 			  for  i = 1 to 8
 			       for  j = 1 to 8
-			            if player = 'a' and  iswhitepiece(board[i][j])
-				                  if validMove(board, i, j, kingI, kingJ, 'A') 
+			            if player = 'A' and  iswhitepiece(board[i][j])
+				                  if validMove(board, i, j, kingI, kingJ, 'a') 
 										 return  true  
 								  ok			            
-			           	 elseif  player = 'A' and isblackpiece(board[i][j]) 
-				               if validMove(board, i, j, kingI, kingJ, 'a')   
+			           	 elseif  player = 'a' and isblackpiece(board[i][j]) 
+				               if validMove(board, i, j, kingI, kingJ, 'A')   
 										 return  true 
 								   ok
 			             ok
