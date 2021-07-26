@@ -41,12 +41,35 @@ func Update()
 
          ok
 			
-	 if selectionI >0 and selectionJ >0
-	                  	
-		if validMove(board, selectionI, selectionJ, i, j, turn)
-			 aTile[i][j][:oLoader].setSource(new QUrl("file:///"+currentdir()+"/textures/valid.png") )	
-		ok
-	 ok
+	  if selectionI > 0 and selectionJ > 0 
+                  	
+				if board[i][j] = ' '
+						if validMove(board, selectionI, selectionJ, i, j, turn)
+								 aTile[i][j][:oLoader].setSource(new QUrl("file:///"+currentdir()+"/textures/valid.png") )	
+						ok
+				
+				elseif iswhitepiece(board[i][j]) and turn = 'a'
+						if validMove(board, selectionI, selectionJ, i, j, turn)
+								 aTile[i][j][:oLoader].setSource(new QUrl("file:///"+currentdir()+"/textures/enimy.png") )	
+						ok
+				
+				elseif isblackpiece(board[i][j]) and turn = 'A'
+						if validMove(board, selectionI, selectionJ, i, j, turn)
+								 aTile[i][j][:oLoader].setSource(new QUrl("file:///"+currentdir()+"/textures/enimy.png") )	
+						ok
+				
+				elseif iswhitepiece(board[i][j]) and turn = 'A'
+						if validMove(board, selectionI, selectionJ, i, j, turn)	
+								 aTile[i][j][:oLoader].setSource(new QUrl("file:///"+currentdir()+"/textures/frend.png") )	
+						ok
+				
+				elseif isblackpiece(board[i][j]) and turn = 'a'
+							if validMove(board, selectionI, selectionJ, i, j, turn)
+								 aTile[i][j][:oLoader].setSource(new QUrl("file:///"+currentdir()+"/textures/frend.png") )	
+							ok
+				ok
+        	   
+     	 ok
 			
       // Draws a game piece.
       piece = board[i][j]
