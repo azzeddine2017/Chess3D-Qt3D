@@ -170,9 +170,8 @@ func HandleNewSelection( i, j)
 			
 		   // -------Trying to move a selected piece--------.
 		   elseif selectionI > 0 and selectionJ > 0
-
-						
-
+	
+				      if CasteleKing(board, selectionI, selectionJ, i,j) ok
 				     if validMove(board, selectionI, selectionJ, i, j, turn)
 							   deletepiece(board, i, j)
 						       board[i][j] = board[selectionI][selectionJ]
@@ -245,7 +244,45 @@ func mouseInput(i,j)
 			
 			   ok
 
-			   
+	//----------------------------------------------------
+func CasteleKing(board, fromI, fromJ, toI,toJ)
+
+	Piece = Board[fromI][fromJ]
+    ?Piece
+	?"fromI"+ fromI+"-"+toI  ?"fromJ"+ fromJ+"-"+toJ
+
+
+	if Piece ='kr' and fromJ = 4 and    toJ = 2 and Board[1][1] = 'rr' and 
+					Board[1][2] = ' ' and Board[1][3] = ' ' 
+		deletepiece(board,1, 1)
+		Board[1][1] = ' ' 
+		Board[1][3]  = 'rr'
+		redrowpiece(board, 1, 3)
+
+	elseif Piece = 'kr' and fromJ = 4 and  toJ = 6 and board[1][8] = 'rl' and 
+			board[1][7] = ' '  and board[1][6] = ' ' and board[1][5] = ' ' 
+		deletepiece(board,1, 8)
+		Board[1][8] = ' '
+		Board[1][5]  = 'rl'
+		redrowpiece(board, 1, 5)
+		
+	elseif Piece = 'Kl' and fromJ = 4 and toJ = 6 and board[8][8] = 'Rr' and
+			 board[8][7] = ' ' and board[8][6] = ' '  and board[8][5] =  ' '
+	 	deletepiece(board,8, 8)
+		Board[8][8] = ' ' 
+		Board[8][5]  = 'Rr'
+		redrowpiece(board, 8, 5)
+		
+	
+	elseif Piece = 'Kl' and fromJ = 4 and toJ = 2 and board[8][1] = 'Rl' and 
+					board[8][2] =  ' ' and board[8][3] =  ' '
+	    deletepiece(board,8, 1)
+		Board[8][1] = ' ' 
+		Board[8][3]  = 'Rl'
+		redrowpiece(board, 8, 3)
+	ok
+
+		   
 // ----------Check that a move attempt is valid---------	
 func validMove(board, fromI, fromJ, toI, toJ, turn)
 		
@@ -289,8 +326,12 @@ func validMove(board, fromI, fromJ, toI, toJ, turn)
 			        if not isClear(board, fromI, fromJ, toI, toJ) return false ok		    
 				ok
 			    // --------Any king--------
-			    if  piece = 'Kl' or  piece = 'kr'
-			        	if dx > 1 or dy > 1 return false ok
+			     if  piece = 'kr'
+					if  not (fromI =1 and fromJ =4 and dx = 2 and dy = 0) and
+								 (dx >1 or dy >1)  return false ok
+				elseif  piece = 'Kl' 
+					if  not (fromI =8 and fromJ =4 and dx = 2 and dy = 0) and
+								(dx >1 or dy >1)  return false ok
 			   ok
 			  
        			 	
