@@ -175,6 +175,8 @@ func HandleNewSelection( i, j)
 				      
 				     if CasteleKing(board, selectionI, selectionJ, i,j) ok
 				     
+				     if DrawProPawn(board, selectionI, selectionJ, i,j)   ok
+				     
 				     if validMove(board, selectionI, selectionJ, i, j, turn)
 							   deletepiece(board, i, j)
 						       board[i][j] = board[selectionI][selectionJ]
@@ -189,8 +191,8 @@ func HandleNewSelection( i, j)
 						                   MsgBlack( MSG_LOSE)									
 							            else
 							               turn = 'B'            
-							               MsgBlack(MSG_YOUR_TURN)
-											Camturn = true		
+							                if not DrawPromotionPawn MsgBlack(MSG_YOUR_TURN) ok
+									if not DrawPromotionPawn Camturn = true ok			
 							            ok				
 						  		else
 								         if isCheckMate(board, 'W')
@@ -198,8 +200,8 @@ func HandleNewSelection( i, j)
 								             MsgBlack( MSG_WIN)						    		
 								         else
 								             turn = 'W'
-								             MsgWhite( MSG_YOUR_TURN)
-								              Camturn = true	
+								             if not DrawPromotionPawn MsgWhite( MSG_YOUR_TURN) ok
+								             if not DrawPromotionPawn Camturn = true ok	
 								         ok				
 						   		ok
 					 else				
@@ -247,7 +249,7 @@ func mouseInput(i,j)
 			
 			   ok
 
-	//----------------------------------------------------
+//----------------------------------------------------
 func CasteleKing(board, fromI, fromJ, toI,toJ)
 
 	Piece = Board[fromI][fromJ]
@@ -316,6 +318,177 @@ func EnPassant(board, fromI, fromJ, toI,toJ)
 				 Board[fromI][fromJ-1] = ' ' 
 		ok	
 
+//----------------------------------------------------
+func DrawProPawn(board, fromI, fromJ, toI,toJ)
+
+	        Piece = Board[fromI][fromJ]	
+
+			if ispawnwhite(Piece) and fromI = 7 and toI = 8
+					DrawPromotionPawn =true
+					otext3d{
+						       setText3D("Choose Pawn promotion",100)
+						       SetTextColor(Blue)
+								SetTextPos(40, 50, 190)
+						   }
+					 for i = 1 to 4
+				     		     v = i * 15
+						         aProPawn[i]=[]
+						         aProPawn[i][:oProPawn] = new  QMesh(aProPawn[i][:oProPawnEntity])
+						         aProPawn[i][:oProPawnTransform] = new  QTransform(aProPawn[i][:oProPawn]){
+						                                               setTranslation(new QVector3D(-70+(v+v),0.1, 100))
+																	   setScale(0.3)
+																	   oQ = new QQuaternion(0,0,0,0)
+																       SetRotation(oQ.FromAxisAndAngle(new QVector3D(0, 1, 0), 270))
+							                                      	  }
+						         aProPawn[i][:oProPawnLoader] = new  QTextureLoader(aProPawn[i][:oProPawn]){
+														setSource(new QUrl("file:///"+currentdir() + "/textures/WhiteProPaw.png" ) )
+														}
+						         aProPawn[i][:oProPawnMaterial] = new QTextureMaterial(aProPawn[i][:oProPawn]){
+						                                           setTexture(aProPawn[i][:oProPawnLoader])
+						                                    	   }
+						         aProPawn[i][:oProPawnPicker ]= new qObjectPicker(aProPawn[i][:oProPawn]){
+							                                     setclickedevent("setPawnPromotion("+i+","+ toI+","+toJ+")")
+																  }
+						         aProPawn[i][:oProPawnEntity] = new QEntity(oRootEntity){
+						                                          addComponent(aProPawn[i][:oProPawn])
+						                                          addComponent(aProPawn[i][:oProPawnMaterial])
+						                                          addComponent(aProPawn[i][:oProPawnTransform])
+						                                          addComponent(aProPawn[i][:oProPawnPicker ])
+						                                   		 }
+					 next
+				
+					 aProPawn[1][:oProPawn].setSource(new QUrl("file:///"+currentdir() + "/models/queen.obj"))
+					 aProPawn[2][:oProPawn].setSource(new QUrl("file:///"+currentdir() + "/models/bishop.obj"))
+					 aProPawn[3][:oProPawn].setSource(new QUrl("file:///"+currentdir() + "/models/knight.obj"))
+					 aProPawn[4][:oProPawn].setSource(new QUrl("file:///"+currentdir() + "/models/rook.obj"))
+				
+			elseif ispawnblack(Piece) and fromI = 2 and toI = 1
+					DrawPromotionPawn =true
+					otext3d{
+						       setText3D("Choose Pawn promotion",100)
+						       SetTextColor(Blue)
+								SetTextPos(-60, 50, -190)
+						   }
+					 for i = 1 to 4
+				     		     v = i * 15
+						         aProPawn[i]=[]
+						         aProPawn[i][:oProPawn] = new  QMesh(aProPawn[i][:oProPawnEntity])
+						         aProPawn[i][:oProPawnTransform] = new  QTransform(aProPawn[i][:oProPawn]){
+						                                               setTranslation(new QVector3D(-70+(v+v),0.1, -100))
+																	   setScale(0.3)
+																	   oQ = new QQuaternion(0,0,0,0)
+																       SetRotation(oQ.FromAxisAndAngle(new QVector3D(0, 1, 0), 270))
+							                                      	  }
+						         aProPawn[i][:oProPawnLoader] = new  QTextureLoader(aProPawn[i][:oProPawn]){
+														setSource(new QUrl("file:///"+currentdir() + "/textures/BlackProPaw.png" ) )
+														}
+						         aProPawn[i][:oProPawnMaterial] = new QTextureMaterial(aProPawn[i][:oProPawn]){
+						                                           setTexture(aProPawn[i][:oProPawnLoader])
+						                                    	   }
+						         aProPawn[i][:oProPawnPicker ]= new qObjectPicker(aProPawn[i][:oProPawn]){
+							                                     setclickedevent("setPawnPromotion("+i+","+ toI+","+toJ+")")
+																  }
+						         aProPawn[i][:oProPawnEntity] = new QEntity(oRootEntity){
+						                                          addComponent(aProPawn[i][:oProPawn])
+						                                          addComponent(aProPawn[i][:oProPawnMaterial])
+						                                          addComponent(aProPawn[i][:oProPawnTransform])
+						                                          addComponent(aProPawn[i][:oProPawnPicker ])
+						                                   		 }
+					 next
+				
+					 aProPawn[1][:oProPawn].setSource(new QUrl("file:///"+currentdir() + "/models/queen.obj"))
+					 aProPawn[2][:oProPawn].setSource(new QUrl("file:///"+currentdir() + "/models/bishop.obj"))
+					 aProPawn[3][:oProPawn].setSource(new QUrl("file:///"+currentdir() + "/models/knight.obj"))
+					 aProPawn[4][:oProPawn].setSource(new QUrl("file:///"+currentdir() + "/models/rook.obj"))
+			ok
+			
+//-------------------------------------
+func RemoveProPawnComponent()
+
+			 for i = 1 to 4
+				aProPawn[i][:oProPawnEntity].removeComponent(aProPawn[i][:oProPawn])
+				aProPawn[i][:oProPawnEntity].removeComponent(aProPawn[i][:oProPawnMaterial])
+				aProPawn[i][:oProPawnEntity].removeComponent(aProPawn[i][:oProPawnTransform])
+				aProPawn[i][:oProPawnEntity].removeComponent(aProPawn[i][:oProPawnPicker ])	
+			next
+	
+//----------------------
+func setPawnPromotion( targetID, toI, toJ)
+		
+	 Piece =  board[toI][toJ]	
+
+	switch targetID
+
+			on 1  	if ispawnwhite(Piece)		
+						deletepiece(board,toI, toJ)
+						Board[toI][toJ] = ' ' 
+						Board[toI][toJ]  = 'ppqw'
+						redrowpiece(board, toI, toJ)
+						RemoveProPawnComponent()
+						DrawPromotionPawn = false
+						Camturn = true
+				else
+						deletepiece(board,toI, toJ)
+						Board[toI][toJ] = ' ' 
+						Board[toI][toJ]  = 'ppqb'
+						redrowpiece(board, toI, toJ)
+						RemoveProPawnComponent()
+						DrawPromotionPawn = false
+						Camturn = true
+				ok
+			on 2  	if ispawnwhite(Piece)		
+						deletepiece(board,toI, toJ)
+						Board[toI][toJ] = ' ' 
+						Board[toI][toJ]  = 'ppbw'
+						redrowpiece(board, toI, toJ)
+						RemoveProPawnComponent()
+						DrawPromotionPawn = false
+						Camturn = true
+				else
+						deletepiece(board,toI, toJ)
+						Board[toI][toJ] = ' ' 
+						Board[toI][toJ]  = 'ppbb'
+						redrowpiece(board, toI, toJ)
+						RemoveProPawnComponent()
+						DrawPromotionPawn = false
+						Camturn = true
+				ok
+		    on 3  	if ispawnwhite(Piece)		
+						deletepiece(board,toI, toJ)
+						Board[toI][toJ] = ' ' 
+						Board[toI][toJ]  = 'ppkw'
+						redrowpiece(board, toI, toJ)
+						RemoveProPawnComponent()
+						DrawPromotionPawn = false
+						Camturn = true
+				else
+						deletepiece(board,toI, toJ)
+						Board[toI][toJ] = ' ' 
+						Board[toI][toJ]  = 'ppkb'
+						redrowpiece(board, toI, toJ)
+						RemoveProPawnComponent()
+						DrawPromotionPawn = false
+						Camturn = true
+				ok
+			on 4    if ispawnwhite(Piece)		
+						deletepiece(board,toI, toJ)
+						Board[toI][toJ] = ' ' 
+						Board[toI][toJ]  = 'pprw'
+						redrowpiece(board, toI, toJ)
+						RemoveProPawnComponent()
+						DrawPromotionPawn = false
+						Camturn = true
+				else
+						deletepiece(board,toI, toJ)
+						Board[toI][toJ] = ' ' 
+						Board[toI][toJ]  = 'pprb'
+						redrowpiece(board, toI, toJ)
+						RemoveProPawnComponent()
+						DrawPromotionPawn = false
+						Camturn = true
+				ok
+   		 off
+
 		   
 // ----------Check that a move attempt is valid---------	
 func validMove(board, fromI, fromJ, toI, toJ, turn)
@@ -344,30 +517,30 @@ func validMove(board, fromI, fromJ, toI, toJ, turn)
 				        if not isClear(board, fromI, fromJ, toI, toJ)  return false  ok			   
 				ok
 			    // -----------Any rook------------
-			    if  piece = 'Rr' or  piece = 'rr' or  piece = 'Rl' or  piece = 'rl'  
+			    if  piece = 'Rr' or piece = 'rr' or piece = 'Rl' or piece = 'rl' or piece = 'pprw' or piece = 'pprb' 
 				        if dx > 0 and dy > 0 return false ok
 				        if  not isClear(board, fromI, fromJ, toI, toJ) return false ok			   
 				ok
 			    // ----------Any knight-------------
-			    if  piece = 'Nr' or  piece = 'nr' or  piece = 'Nl' or  piece = 'nl' 
+			    if  piece = 'Nr' or piece = 'nr' or piece = 'Nl' or  piece = 'nl' or piece = 'ppkw' or piece = 'ppkb' 
 			        	if  not ((dx = 1 and dy = 2) or (dx = 2 and dy = 1)) return false ok			    
 				ok
 			    // ----------Any bishop------------
-			    if  piece = 'Br' or   piece = 'br' or  piece = 'Bl' or  piece = 'bl' 
+			    if  piece = 'Br' or piece = 'br' or piece = 'Bl' or piece = 'bl' or piece = 'ppbw' or piece = 'ppbb'
 				        if dx != dy return false ok
 				        if  not isClear(board, fromI, fromJ, toI, toJ)  return false  ok			    
 				ok
 			    // --------Any queen------
-			    if  piece = 'Ql' or  piece = 'qr'
+			    if  piece = 'Ql' or piece = 'qr' or piece = 'ppqw' or piece = 'ppqb'
 			        if dx > 0 and dy > 0 and dx != dy return false ok
 			        if not isClear(board, fromI, fromJ, toI, toJ) return false ok		    
 				ok
 			    // --------Any king--------
 			     if  piece = 'kr'
-					if  not (fromI =1 and fromJ =4 and dx = 2 and dy = 0) and
+					if not (fromI =1 and fromJ =4 and dx = 2 and dy = 0) and
 								 (dx >1 or dy >1)  return false ok
-				elseif  piece = 'Kl' 
-					if  not (fromI =8 and fromJ =4 and dx = 2 and dy = 0) and
+					elseif piece = 'Kl' 
+					if not (fromI =8 and fromJ =4 and dx = 2 and dy = 0) and
 								(dx >1 or dy >1)  return false ok
 			   ok
 			  
