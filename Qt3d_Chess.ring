@@ -168,10 +168,13 @@ func HandleNewSelection( i, j)
 						      selectionI = i
 						      selectionJ = j
 			
-		   // -------Trying to move a selected piece--------.
+		   // -------Trying to move a selected piece--------
 		   elseif selectionI > 0 and selectionJ > 0
-	
-				      if CasteleKing(board, selectionI, selectionJ, i,j) ok
+		   
+				     if EnPassant(board, selectionI, selectionJ, i,j) ok
+				      
+				     if CasteleKing(board, selectionI, selectionJ, i,j) ok
+				     
 				     if validMove(board, selectionI, selectionJ, i, j, turn)
 							   deletepiece(board, i, j)
 						       board[i][j] = board[selectionI][selectionJ]
@@ -248,10 +251,7 @@ func mouseInput(i,j)
 func CasteleKing(board, fromI, fromJ, toI,toJ)
 
 	Piece = Board[fromI][fromJ]
-    ?Piece
-	?"fromI"+ fromI+"-"+toI  ?"fromJ"+ fromJ+"-"+toJ
-
-
+    
 	if Piece ='kr' and fromJ = 4 and    toJ = 2 and Board[1][1] = 'rr' and 
 					Board[1][2] = ' ' and Board[1][3] = ' ' 
 		deletepiece(board,1, 1)
@@ -281,6 +281,40 @@ func CasteleKing(board, fromI, fromJ, toI,toJ)
 		Board[8][3]  = 'Rl'
 		redrowpiece(board, 8, 3)
 	ok
+//----------------------------------------------------
+func EnPassant(board, fromI, fromJ, toI,toJ)
+
+		 Piece = Board[fromI][fromJ]
+		
+		if ispawnwhite(Piece) and fromI = 5 and toJ =fromJ+1  and 
+		   validMove(board, 7, fromJ+1, 5, toJ+1, 'B') and 
+			ispawnblack(Board[fromI][fromJ+1])
+
+				 deletepiece(board,fromI, fromJ+1)
+				 Board[fromI][fromJ+1] = ' '  
+		
+		elseif ispawnwhite(Piece) and fromI = 5 and toJ =fromJ-1 and 
+				validMove(board, 7, fromJ-1, 5, toJ-1, 'B') and
+				 ispawnblack(Board[fromI][fromJ-1])
+
+				 deletepiece(board,fromI, fromJ-1)
+				 Board[fromI][fromJ-1] = ' ' 
+		
+		
+		elseif ispawnblack(Piece) and fromI = 4 and toJ =fromJ+1  and 
+			  validMove(board, 2, fromJ+1, 4, toJ+1, 'W') and 
+				ispawnwhite(Board[fromI][fromJ+1])
+
+				 deletepiece(board,fromI, fromJ+1)
+				 Board[fromI][fromJ+1] = ' '  
+		
+		elseif ispawnblack(Piece) and fromI = 4  and toJ =fromJ-1 and 
+				 validMove(board, 2, fromJ-1, 4, toJ-1, 'W') and
+				 ispawnwhite(Board[fromI][fromJ-1])
+
+				 deletepiece(board,fromI, fromJ-1)
+				 Board[fromI][fromJ-1] = ' ' 
+		ok	
 
 		   
 // ----------Check that a move attempt is valid---------	
@@ -295,14 +329,17 @@ func validMove(board, fromI, fromJ, toI, toJ, turn)
 				        if ispawnblack( piece)
 					            if fromI != 7 and dy > 1 return false  ok 
 					            if fromI = 7 and dy > 2 return false  ok
+						    if fromI != 4 and dx > 0 and (dx != 1 or dy != 1 or board[toI][toJ] = ' ') return false  ok
+						    if fromI = 4 and dx > 0 and (dx != 1 or dy != 1  ) return false  ok
 					            if fromI - toI < 0 return false   ok	       
 				        //----- White pawn------
 				        elseif ispawnwhite( piece)
 					            if fromI != 2 and dy > 1 return false  ok
 					            if fromI = 2 and dy > 2 return false  ok
+						    if fromI != 5 and dx > 0 and (dx != 1 or dy != 1 or board[toI][toJ] = ' ') return false  ok
+						    if fromI = 5 and dx > 0 and (dx != 1 or dy != 1) return false  ok
 					            if fromI - toI > 0 return false  ok
 				        ok
-				        if dx > 0 and (dx != 1 or dy != 1 or board[toI][toJ] = ' ' ) return false  ok
 				        if dy > 0 and dx = 0 and board[toI][toJ] != ' '  return false  ok
 				        if not isClear(board, fromI, fromJ, toI, toJ)  return false  ok			   
 				ok
