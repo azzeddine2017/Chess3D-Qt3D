@@ -272,7 +272,65 @@ func redrowpiece(board, i, j)
 					            SetModelTexture("textures/BlackPiece.jpg")
 					            setModelDirection( 0, 1, 0, degreeB)
 								}
-         ok
+         elseif board[i][j] = 'ppqw'
+			  oProPawQuinW = new Model3d(WhiteProPawnEntity, oProPawQuinW, "models/queen.obj"){
+					            setModelpos(i*17-75, 0,(j*17-42)-33)
+					            setmodelSiz(0.19, 0.20, 0.19)
+					            SetModelTexture("textures/WhiteProPaw.png")
+					            setModelDirection( 0, 1, 0, degreeW)
+								} 
+		 elseif board[i][j] = 'ppqb'
+			 oProPawQuinB	=	new Model3d(BlackProPawnEntity, oProPawQuinB, "models/queen.obj"){
+					            setModelpos(i*17-75, 0, (j*17-42)-33)
+					            setmodelSiz(0.19, 0.20, 0.19)
+					            SetModelTexture("textures/BlackProPaw.png")
+					            setModelDirection( 0, 1, 0, degreeB)
+								}
+					
+        elseif board[i][j] = 'pprw'  
+				oProPawRookW= new Model3d(WhiteProPawnEntity, oProPawRookW,  "models/rook.obj"){
+					            setModelpos(i*17-75, 0, (j*17-42)-33)
+					            setmodelSiz(0.19, 0.20, 0.19)
+					            SetModelTexture("textures/WhiteProPaw.png")
+					            setModelDirection( 0, 1, 0, degreeW)
+								}
+		elseif board[i][j] = 'pprb' 
+				oProPawRookB	= new Model3d(BlackProPawnEntity, oProPawRookB,  "models/rook.obj"){
+					            setModelpos(i*17-75, 0, (j*17-42)-33)
+					            setmodelSiz(0.19, 0.20, 0.19)
+					            SetModelTexture("textures/BlackProPaw.png")
+					            setModelDirection( 0, 1, 0, degreeB)
+								}
+ 		 elseif board[i][j] = 'ppbw'
+   				 oProPawBishopW = new Model3d(WhiteProPawnEntity, oProPawBishopW, "models/Bishop.obj"){
+					            setModelpos(i*17-75, 0, (j*17-42)-33)
+					            setmodelSiz(0.19, 0.20, 0.19)
+					            SetModelTexture("textures/WhiteProPaw.png")
+					            setModelDirection( 0, 1, 0, degreeW)
+								}
+		elseif board[i][j] = 'ppbb'
+				oProPawBishopB= new Model3d(BlackProPawnEntity, oProPawBishopB, "models/Bishop.obj"){
+					            setModelpos(i*17-75, 0, (j*17-42)-33)
+					            setmodelSiz(0.19, 0.20, 0.19)
+					            SetModelTexture("textures/BlackProPaw.png")
+					            setModelDirection( 0, 1, 0, degreeB)
+								}
+				
+   		 elseif board[i][j] = 'ppkw'
+				  oProPawknightW = new Model3d(WhiteProPawnEntity, oProPawknightW, "models/knight.obj"){
+					            setModelpos(i*17-75, 0,(j*17-42)-33)
+					            setmodelSiz(0.19, 0.20, 0.19)
+					            SetModelTexture("textures/WhiteProPaw.png")
+					            setModelDirection( 0, 1, 0, degreeW)
+								} 
+		elseif board[i][j] = 'ppkb'
+				oProPawknightB= new Model3d(BlackProPawnEntity, oProPawknightB, "models/knight.obj"){
+					            setModelpos(i*17-75, 0,(j*17-42)-33)
+					            setmodelSiz(0.19, 0.20, 0.19)
+					            SetModelTexture("textures/BlackProPaw.png")
+					            setModelDirection( 0, 1, 0, degreeB)
+								}
+		ok
 
 
 
@@ -313,6 +371,16 @@ func redrowpiece(board, i, j)
 			elseif piece = 'P7'   opawnb7.removecomponent() 
 			elseif piece = 'p8'   opawnw8.removecomponent() 
 			elseif piece = 'P8'   opawnb8.removecomponent()  
+			elseif piece = 'ppqw'   oProPawQuinW.removecomponent()
+			elseif piece = 'ppqb'   oProPawQuinB.removecomponent()
+			elseif piece = 'pprw'   oProPawRookW.removecomponent()
+			elseif piece = 'pprb'   oProPawRookB.removecomponent()
+			elseif piece = 'ppbw'   oProPawBishopW.removecomponent()
+			elseif piece = 'ppbb'   oProPawBishopB.removecomponent()
+			elseif piece = 'ppkw'   oProPawknightW.removecomponent()
+			elseif piece = 'ppkb'   oProPawknightB.removecomponent()
+
 			ok
+
 
 
