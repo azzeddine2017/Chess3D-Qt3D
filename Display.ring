@@ -26,7 +26,8 @@ class DisplayGame
     PieceEntity= new QEntity(oRootEntity)
     WhitePEntity= new QEntity(PieceEntity)
     BlackPEntity= new QEntity(PieceEntity)
-   
+    WhiteProPawnEntity= new QEntity(PieceEntity)
+    BlackProPawnEntity= new QEntity(PieceEntity)
    oFrameAction = new qFrameAction(oRootEntity) {
          settriggeredevent("FrameAction()")
          }
@@ -65,11 +66,8 @@ func StartNewGame()
 			 turn = 'W'
 			 SayText(MSG_WELCOME)
 			 DrowCamera()
-			 //DrawStars()    
-			// DrowPlanets()
 			 DrowLight()
- 			 DrowSkyboxs()			 
-			// Drowlogo()		 		  
+ 			 DrowSkyboxs()			 		 		  
 			 DrowBoard()  
 			 DrowTest3D() 
 			 DrowTiles()
@@ -514,108 +512,6 @@ func DrowLight()
                                     }
    next
 
-//------- Draw Stars--------
-func DrawStars()
-
-      aStars = list(100)
-
-   for n = 1 to len(aStars)
-
-      aStars[n] = []
-
-      aStars[n][:oStars] = new QSphereMesh(aStars[n][:oStarsEntity]){
-                               setRadius(1.0)
-                               setRings(100)
-                               setSlices(20)
-			       }
-	
-      aStars[n][:oStarsMaterial] = new QPhongMaterial(aStars[n][:oStars]){
-                                   setDiffuse(White)
-                                   }
-
-      aStars[n][:oStarsTransform] = new  QTransform(aStars[n][:oStarsEntity]){
-                                    setScale(1)
-                                     setTranslation(new QVector3D(random()%1000-(500),random()%-100-(-20), random()%1000-(500)))
-                                    }
-
-      aStars[n][:oStarsEntity] = new QEntity(oRootEntity){
-                                     addComponent(aStars[n][:oStars])
-                                     addComponent(aStars[n][:oStarsmaterial])
-                                     addComponent(aStars[n][:oStarsTransform])
-                                     }
-
-   next
-
-//------Drow Planets---------
-func DrowPlanets()
-
-   aPlanets = list(3)
-
-   for n = 1 to len(aPlanets)
-
-      aTexturePlanet =[ "/textures/planet_1.jpg","/textures/planet_2.jpg","/textures/planet_3.png"]
-
-      TextPlan = RandomList(aTexturePlanet)
-
-      aPlanets[n] = []
-
-      aPlanets[n][:oPlanets] = new QSphereMesh(aPlanets[n][:oPlanetsEntity]){
-                                    setRadius(1.0)
-                                    setRings(100)
-                                    setSlices(20)
-                             	     }
-
-      aPlanets[n][:oTextureLoader] = new  QTextureLoader(aPlanets[n][:oPlanets]){
-                                          setSource(new QUrl("file:///"+currentdir()+TextPlan) )
-                                   	 }
-
-      aPlanets[n][:oPlanetsMaterial] = new QTextureMaterial(aPlanets[n][:oPlanets]){
-                                           setTexture(aPlanets[n][:oTextureLoader])
-					   }
-
-      aPlanets[n][:oPlanetsTransform] = new  QTransform(aPlanets[n][:oPlanetsEntity]){
-                                             setScale(70)
-                                             setTranslation(new QVector3D(random()%1000-(900),random()%100-(-100), random()%1000-(900)))
-                                       	    }
-
-      aPlanets[n][:oPlanetsEntity] = new QEntity(oRootEntity){
-                                          addComponent(aPlanets[n][:oPlanets])
-                                          addComponent(aPlanets[n][:oPlanetsmaterial])
-                                          addComponent(aPlanets[n][:oPlanetsTransform])
-                                         }
-   next
-
-
-// ------  draw logo------------
-/*func drowlogo()
-
-	ologo = new  QPlaneMesh(oRootEntity){
-							setHeight(10)
-							setWidth(10)
-							setmeshresolution(new qSize(10,10))
-					}
-	ologo_Transform = new  QTransform(ologo){
-							setScale(13.6)
-							setTranslation(new QVector3D(0, 0.15, 0))
-							 oQ = new QQuaternion(0,0,0,0)
-							SetRotation(oQ.FromAxisAndAngle(new QVector3D(0, -1,0), 270))
-							}
-	oTextureLoader = new  QTextureLoader(ologo){
-							setSource(new QUrl("file:///"+currentdir() + "/textures/chess1.png" ) )
-							}
-	ologo_Material = new QTextureMaterial(ologo){
-							setTexture(oTextureLoader)
-							}
-	ologo_Picker = new qObjectPicker(ologo){
-			     setclickedevent("DeliteAdd()")
-								  }
-	ologo_Entity = new QEntity(oRootEntity){
-							addComponent(ologo)
-							addComponent(ologo_Picker)
-							addComponent(ologo_Material)
-							addComponent(ologo_Transform)
-						    }
-*/		
 
 //---------------------------- Draws the board --------------------------
 func DrowBoard()
