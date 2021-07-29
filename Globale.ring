@@ -13,7 +13,10 @@
 
 
 
-
+	BlackProPawnEntity=null		WhiteProPawnEntity=null
+	oProPawnEntity=null	oProPawn=null	oProPawnMaterial=null	oProPawnPicker=null	oProPawnTransform=null
+	oProPawQuinW=null	 oProPawQuinB=null	oProPawRookW=null	oProPawRookB=null		oProPawBishopW=null
+	oProPawBishopB=null	oProPawknightW=null	oProPawknightB=null
 	oview    = null 	oWidget = null	oRootEntity = null	oCameraEntity = null
 	oCamController = null	aStars = null	aLight = null	ologo = null
 	oboard = null	oText3d = null    PieceEntity = null 	WhitePEntity = null
@@ -46,7 +49,8 @@
 	Camangle =0  
 	angleCam=0
 	turn=""
-   
+   aProPawn=list(4)
+    aTile = list(8,8)
 	TILE_SIZE      = 17
    board=list(8,8)
 	   board = [
@@ -61,10 +65,10 @@
 		   ]
 
 	awhitepiece  = ['rr', 'nr', 'br', 'kr', 'qr', 'bl', 'nl', 'rl', 
-						'p8', 'p7', 'p6', 'p5', 'p4', 'p3', 'p2', 'p1']
+						'p8', 'p7', 'p6', 'p5', 'p4', 'p3', 'p2', 'p1', 'ppqw', 'pprw', 'ppbw', 'ppkw']
 
 	ablackpiece = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8',
-						   'Rl', 'Nl', 'Bl', 'Kl', 'Ql', 'Br', 'Nr', 'Rr']
+						   'Rl', 'Nl', 'Bl', 'Kl', 'Ql', 'Br', 'Nr', 'Rr', 'ppqb', 'pprb', 'ppbb', 'ppkb']
 
 	apawnpiece = [ 'P1','p1','P2','p2','P3','p3','P4','p4',
 							'P5','p5','P6','p6', 'P7','p7','P8','p8' ]
