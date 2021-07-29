@@ -30,7 +30,7 @@
 	opawnb4= null 	opawnb5= null 	opawnb6= null 	opawnb7= null 	opawnb8= null 	
 	aplanets = null    ologo_Entity= null   ologo_picker= null	  ologo_material= null		
 	ologo_Transform= null
-
+	DrawPromotionPawn = false
 	VisionLevel =0
     CamraMenuelaAngle = 0
     TilePicked = false  
