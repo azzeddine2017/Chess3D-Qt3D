@@ -97,17 +97,10 @@ func DrowSkyboxs()
 		 
 			//--------------------- choose one ------- Skybox  drawing --------------
 			//----------- Skybox Blue -----------
-			// DrowSkyBox(oRootEntity , "textures\skybox" ,"SpaceBlue_negx.png" , "SpaceBlue_negy.png" , "SpaceBlue_negz.png" , 
-			//					"SpaceBlue_posx.png" , "SpaceBlue_posy.png" , "SpaceBlue_posz.png" )
+			 DrowSkyBox(oRootEntity , "textures\skybox" ,"SpaceBlue_negx.png" , "SpaceBlue_negy.png" , "SpaceBlue_negz.png" , 
+								"SpaceBlue_posx.png" , "SpaceBlue_posy.png" , "SpaceBlue_posz.png" )
 			
-			//----------- Skybox Lightblue ----------
-				 DrowSkyBox(oRootEntity , "textures\skybox" ,"SpaceLightblue_negx.png" , "SpaceLightblue_negy.png" , "SpaceLightblue_negz.png" , 
-								"SpaceLightblue_posx.png" , "SpaceLightblue_posy.png" , "SpaceLightblue_posz.png" )
-		
-			//-----------Skybox Red  ------------	
-			// DrowSkyBox(oRootEntity , "textures\skybox" ,"SpaceRed_negx.png" , "SpaceRed_negy.png" , "SpaceRed_negz.png" ,
-			//					"SpaceRed_posx.png" , "SpaceRed_posy.png" , "SpaceRed_posz.png" )
-		 		  
+			
 
 //--------------------------------
 func DrowTest3D()   
