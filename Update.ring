@@ -85,9 +85,9 @@ func Update()
                      SetModelTexture("textures/WhitePieceCliked.jpg")
                  }
          ok
-      ok      
+            
       // Black piece.
-      if piece = 'Kl'
+      elseif piece = 'Kl'
          okingb{
                SetModelTexture("textures/BlackPiece.jpg")
          }
@@ -97,10 +97,10 @@ func Update()
                   SetModelTexture("textures/BlackPieceCliked.jpg")
             }
          ok
-      ok
+      
       //---------------------------------------------------------------------
       // White piece.
-      if piece = 'qr'
+      elseif piece = 'qr'
          oqueenw{
                   SetModelTexture("textures/WhitePiece.jpg")
                }
@@ -109,9 +109,9 @@ func Update()
                      SetModelTexture("textures/WhitePieceCliked.jpg")
                   }
          ok
-      ok      
+            
       // Black piece.
-      if piece = 'Ql'
+      elseif piece = 'Ql'
          oqueenb{
                   SetModelTexture("textures/BlackPiece.jpg")
                }
@@ -120,10 +120,10 @@ func Update()
                      SetModelTexture("textures/BlackPieceCliked.jpg")
                   }
          ok
-      ok
+      
       //------------------------------------------------------------------------
       // White piece.
-      if piece = 'br'
+      elseif piece = 'br'
          oBishopwr{
                   SetModelTexture("textures/WhitePiece.jpg")
                 }
@@ -132,9 +132,9 @@ func Update()
                            SetModelTexture("textures/WhitePieceCliked.jpg")
                           }
                ok
-      ok       
+             
       // Black piece.
-      if piece = 'Br'
+      elseif piece = 'Br'
          oBishopbr{
                   SetModelTexture("textures/BlackPiece.jpg")
                 }
@@ -143,9 +143,9 @@ func Update()
                      SetModelTexture("textures/BlackPieceCliked.jpg")
                    }
          ok
-      ok
+      
        // White piece.
-      if piece = 'bl'
+      elseif piece = 'bl'
          oBishopwl{
                   SetModelTexture("textures/WhitePiece.jpg")
                 }
@@ -154,9 +154,9 @@ func Update()
                            SetModelTexture("textures/WhitePieceCliked.jpg")
                           }
                ok
-      ok        
+             
       // Black piece.
-      if piece = 'Bl'
+      elseif piece = 'Bl'
          oBishopbl{
                   SetModelTexture("textures/BlackPiece.jpg")
                 }
@@ -166,12 +166,12 @@ func Update()
                      SetModelTexture("textures/BlackPieceCliked.jpg")
                    }
          ok
-      ok
+      
            
       //------------------------------------------------------------------------
 
       // White piece.
-      if piece = 'nr'
+      elseif piece = 'nr'
          oknightwr{
                      SetModelTexture("textures/WhitePiece.jpg")
                   }
@@ -181,9 +181,9 @@ func Update()
                      SetModelTexture("textures/WhitePieceCliked.jpg")
                    }
          ok
-      ok  
+        
       // Black piece.
-      if piece = 'Nr'
+      elseif piece = 'Nr'
          oknightbr{
                   SetModelTexture("textures/BlackPiece.jpg")
                 }
@@ -192,9 +192,9 @@ func Update()
                      SetModelTexture("textures/BlackPieceCliked.jpg")
                    }
          ok
-      ok      
+            
       // White piece.
-      if piece = 'nl'
+      elseif piece = 'nl'
          oknightwl{
                      SetModelTexture("textures/WhitePiece.jpg")
                   }
@@ -203,9 +203,9 @@ func Update()
                      SetModelTexture("textures/WhitePieceCliked.jpg")
                    }
          ok
-      ok  
+      
       // Black piece.
-      if piece = 'Nl'
+      elseif piece = 'Nl'
          oknightbl{
                   SetModelTexture("textures/BlackPiece.jpg")
                 }
@@ -214,10 +214,10 @@ func Update()
                      SetModelTexture("textures/BlackPieceCliked.jpg")
                    }
          ok
-      ok  
+       
       //-------------------------------------------------------------------
          // White piece.
-         if piece = 'rr'
+         elseif piece = 'rr'
              orookwr{
                      SetModelTexture("textures/WhitePiece.jpg")
                   }
@@ -226,9 +226,9 @@ func Update()
                              SetModelTexture("textures/WhitePieceCliked.jpg")
                           }
                   ok
-         ok    
+             
          // Black piece.
-         if piece = 'Rr'
+         elseif piece = 'Rr'
             orookbr{
                    SetModelTexture("textures/BlackPiece.jpg")
                  }
@@ -237,9 +237,9 @@ func Update()
                             SetModelTexture("textures/BlackPieceCliked.jpg")
                           }
                   ok
-         ok       
+               
          // White piece.
-         if piece = 'rl'
+         elseif piece = 'rl'
              orookwl{
                      SetModelTexture("textures/WhitePiece.jpg")
                   }
@@ -248,9 +248,9 @@ func Update()
                              SetModelTexture("textures/WhitePieceCliked.jpg")
                           }
                   ok
-         ok         
+                  
          // Black piece.
-         if piece = 'Rl'
+         elseif piece = 'Rl'
             orookbl{
                    SetModelTexture("textures/BlackPiece.jpg")
                  }
@@ -259,10 +259,10 @@ func Update()
                             SetModelTexture("textures/BlackPieceCliked.jpg")
                           }
                   ok
-         ok      
+              
          //-------------------------------------------------------------------------
          // White piece.
-         if piece = 'p1'
+         elseif piece = 'p1'
             opawnw1{
                      SetModelTexture("textures/WhitePiece.jpg")
                   }
@@ -271,9 +271,9 @@ func Update()
                         SetModelTexture("textures/WhitePieceCliked.jpg")
                      }
 			ok
-         ok   
+            
          // Black piece.
-         if piece = 'P1'
+         elseif piece = 'P1'
             opawnb1{
                      SetModelTexture("textures/BlackPiece.jpg")
                   }
@@ -283,10 +283,10 @@ func Update()
                      }
 			
             ok
-         ok
+         
 		//----------------------------------------------------------------------------
 		 // White piece.
-         if piece = 'p2'
+         elseif piece = 'p2'
             opawnw2{
                      SetModelTexture("textures/WhitePiece.jpg")
                   }
@@ -295,9 +295,9 @@ func Update()
                         SetModelTexture("textures/WhitePieceCliked.jpg")
                      }
             ok
-         ok   
+           
          // Black piece.
-         if piece = 'P2'
+         elseif piece = 'P2'
             opawnb2{
                      SetModelTexture("textures/BlackPiece.jpg")
                   }
@@ -306,10 +306,10 @@ func Update()
                         SetModelTexture("textures/BlackPieceCliked.jpg")
                      }
             ok
-         ok
+         
 		//----------------------------------------------------------------------------
 		 // White piece.
-         if piece = 'p3'
+         elseif piece = 'p3'
             opawnw3{
                      SetModelTexture("textures/WhitePiece.jpg")
                   }
@@ -318,9 +318,9 @@ func Update()
                         SetModelTexture("textures/WhitePieceCliked.jpg")
                      }
             ok
-         ok   
+            
          // Black piece.
-         if piece = 'P3'
+         elseif piece = 'P3'
             opawnb3{
                      SetModelTexture("textures/BlackPiece.jpg")
                   }
@@ -329,10 +329,10 @@ func Update()
                         SetModelTexture("textures/BlackPieceCliked.jpg")
                      }
             ok
-         ok
+         
 		//----------------------------------------------------------------------------
 		 // White piece.
-         if piece = 'p4'
+         elseif piece = 'p4'
             opawnw4{
                      SetModelTexture("textures/WhitePiece.jpg")
                   }
@@ -342,9 +342,9 @@ func Update()
                         SetModelTexture("textures/WhitePieceCliked.jpg")
                      }
             ok
-         ok   
+            
          // Black piece.
-         if piece = 'P4'
+         elseif piece = 'P4'
             opawnb4{
                      SetModelTexture("textures/BlackPiece.jpg")
                   }
@@ -354,10 +354,10 @@ func Update()
                         SetModelTexture("textures/BlackPieceCliked.jpg")
                      }
             ok
-         ok
+         
 		//----------------------------------------------------------------------------
 		 // White piece.
-         if piece = 'p5'
+         elseif piece = 'p5'
             opawnw5{
                      SetModelTexture("textures/WhitePiece.jpg")
                   }
@@ -366,9 +366,9 @@ func Update()
                         SetModelTexture("textures/WhitePieceCliked.jpg")
                      }
             ok
-         ok   
+            
          // Black piece.
-         if piece = 'P5'
+         elseif piece = 'P5'
             opawnb5{
                      SetModelTexture("textures/BlackPiece.jpg")
                   }
@@ -378,10 +378,10 @@ func Update()
                         SetModelTexture("textures/BlackPieceCliked.jpg")
                      }
             ok
-         ok
+         
 		//----------------------------------------------------------------------------
 		 // White piece.
-         if piece = 'p6'
+         elseif piece = 'p6'
             opawnw6{
                      SetModelTexture("textures/WhitePiece.jpg")
                   }
@@ -391,9 +391,9 @@ func Update()
                         SetModelTexture("textures/WhitePieceCliked.jpg")
                      }
             ok
-         ok   
+            
          // Black piece.
-         if piece = 'P6'
+         elseif piece = 'P6'
             opawnb6{
                      SetModelTexture("textures/BlackPiece.jpg")
                   }
@@ -403,10 +403,10 @@ func Update()
                         SetModelTexture("textures/BlackPieceCliked.jpg")
                      }
             ok
-         ok
+         
 		//----------------------------------------------------------------------------
 		 // White piece.
-         if piece = 'p7'
+         elseif piece = 'p7'
             opawnw7{
                      SetModelTexture("textures/WhitePiece.jpg")
                   }
@@ -416,9 +416,9 @@ func Update()
                         SetModelTexture("textures/WhitePieceCliked.jpg")
                      }
             ok
-         ok   		
+            		
          // Black piece.
-         if piece = 'P7'
+         elseif piece = 'P7'
             opawnb7{
                      SetModelTexture("textures/BlackPiece.jpg")
                   }
@@ -427,10 +427,10 @@ func Update()
                         SetModelTexture("textures/BlackPieceCliked.jpg")
                      }
             ok
-         ok
+         
 		//----------------------------------------------------------------------------
 		 // White piece.
-         if piece = 'p8'
+         elseif piece = 'p8'
             opawnw8{
                      SetModelTexture("textures/WhitePiece.jpg")
                   }
@@ -440,9 +440,9 @@ func Update()
                         SetModelTexture("textures/WhitePieceCliked.jpg")
                      }
             ok
-         ok   
+            
          // Black piece.
-         if piece = 'P8'
+         elseif piece = 'P8'
             opawnb8{
                      SetModelTexture("textures/BlackPiece.jpg")
                   }
@@ -452,6 +452,104 @@ func Update()
                         SetModelTexture("textures/BlackPieceCliked.jpg")
                      }
             ok
+	 //----------------------------------------------------------------------------
+		 // White piece.
+         elseif piece = 'ppqw'
+            oProPawQuinW{
+                     SetModelTexture("textures/WhiteProPaw.png")
+                  }
+
+            if selectionI = i and selectionJ = j
+               oProPawQuinW{
+                        SetModelTexture("textures/WhitePieceCliked.jpg")
+                     }
+            ok
+            
+         // Black piece.
+         elseif piece = 'ppqb'
+            oProPawQuinB{
+                     SetModelTexture("textures/BlackProPaw.png")
+                  }
+
+            if selectionI = i and selectionJ = j
+               oProPawQuinB{
+                        SetModelTexture("textures/BlackPieceCliked.jpg")
+                     }
+            ok
+		//----------------------------------------------------------------------------
+		 // White piece.
+         elseif piece = 'pprw'
+            oProPawRookW{
+                     SetModelTexture("textures/WhiteProPaw.png")
+                  }
+
+            if selectionI = i and selectionJ = j
+               oProPawRookW{
+                        SetModelTexture("textures/WhitePieceCliked.jpg")
+                     }
+            ok
+            
+         // Black piece.
+         elseif piece = 'pprb'
+            oProPawRookB{
+                     SetModelTexture("textures/BlackProPaw.png")
+                  }
+
+            if selectionI = i and selectionJ = j
+               oProPawRookB{
+                        SetModelTexture("textures/BlackPieceCliked.jpg")
+                     }
+            ok
+		//----------------------------------------------------------------------------
+		 // White piece.
+         elseif piece = 'ppbw'
+            oProPawBishopW{
+                     SetModelTexture("textures/WhiteProPaw.png")
+                  }
+
+            if selectionI = i and selectionJ = j
+               oProPawBishopW{
+                        SetModelTexture("textures/WhitePieceCliked.jpg")
+                     }
+            ok
+            
+         // Black piece.
+         elseif piece = 'ppbb'
+            oProPawBishopB{
+                     SetModelTexture("textures/BlackProPaw.png")
+                  }
+
+            if selectionI = i and selectionJ = j
+               oProPawBishopB{
+                        SetModelTexture("textures/BlackPieceCliked.jpg")
+                     }
+            ok
+
+		//----------------------------------------------------------------------------
+		 // White piece.
+         elseif piece = 'ppkw'
+            oProPawknightW{
+                     SetModelTexture("textures/WhiteProPaw.png")
+                  }
+
+            if selectionI = i and selectionJ = j
+               oProPawknightW{
+                        SetModelTexture("textures/WhitePieceCliked.jpg")
+                     }
+            ok
+            
+         // Black piece.
+         elseif piece = 'ppkb'
+            oProPawknightB{
+                     SetModelTexture("textures/BlackProPaw.png")
+                  }
+
+            if selectionI = i and selectionJ = j
+               oProPawknightB{
+                        SetModelTexture("textures/BlackPieceCliked.jpg")
+                     }
+            ok
+
          ok
 
       next  
