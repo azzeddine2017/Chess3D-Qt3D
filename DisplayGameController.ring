@@ -570,11 +570,11 @@ func HandleNewSelection( i, j)
 										
 											
 								   	  if  oChessboard.ValidMove(board , selectionI , selectionJ , i , j , currentTurn)  
-													/*  if Board[i][j] = ' '
+													   if Board[i][j] = ' '
 																DistrbutMoveSound(Board , selectionI , selectionJ)
 													   else
 																playSoudMove("KingMove.mp3")           
-													   ok	*/
+													   ok	
 														oMove.fromI =selectionI
 														oMove.fromJ = selectionJ
 														oMove.Toi = i
