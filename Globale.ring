@@ -10,6 +10,7 @@
 
 
 //------------------- Object ----------------------------
+	oApp							= 		null 
 	ochessboard				 		= 		null 
 	RecordImage						= 		null 
 	RecordTimer						= 		null 
