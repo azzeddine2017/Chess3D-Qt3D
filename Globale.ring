@@ -154,18 +154,18 @@
 
 //------------------- Var Lists---------------------------------------------
 
-	aOppositeTurn		 =    [ TurnWhite , TurnBlack ]
-	 aCommand		 =    []
-	LegalMove		 =   null
-	LegalMoves               =    []
-	AiBestMove               =    null
-	omove                    =    null
-	LastMove		 =    null
-	list_History_all_moves   =    []
-    list_all_moves               =   []
-	aProPawn		 =		list(4)
-    board			 =		list(8,8)
-    aTile 			 = 	list(8,8)
+    aOppositeTurn		 =    [ TurnWhite , TurnBlack ]
+    aCommand			 =    []
+    LegalMove			 =   null
+    LegalMoves                   =    []
+    AiBestMove                   =    null
+    omove                        =    null
+    LastMove		 	=    null
+    list_History_all_moves   	=    []
+    list_all_moves              =   []
+    aProPawn		 	=	list(4)
+    board		        =	list(8,8)
+    aTile 			= 	list(8,8)
     StartBoard = [
             ['rr', 'nr', 'br', 'kr', 'qr', 'bl', 'nl', 'rl'],
             ['p8', 'p7', 'p6', 'p5', 'p4', 'p3', 'p2', 'p1'],
