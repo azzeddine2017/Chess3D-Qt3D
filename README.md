@@ -7,5 +7,3 @@
 # Chess3d-Qt3D
 ## Chess 3D game in Ring language 
 ### Special thanks to Mr. Bert Mariani and Mr. Mahmoud Samir Fayed
-![PLAY_VS_AI](https://user-images.githubusercontent.com/31375681/130540015-a53ccb30-62f0-49e6-bca8-7b6df14764a0.jpg)
-
