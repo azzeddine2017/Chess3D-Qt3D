@@ -13,56 +13,56 @@
 	ochessboard				 		= 		null 
 	RecordImage						= 		null 
 	RecordTimer						= 		null 
- 	Recordwin							= 		null  
+ 	Recordwin						= 		null  
  	RecordLayout						= 		null 	
-	RecordMainLayout				= 		null 
-	aImages 								= 		null 
+	RecordMainLayout					= 		null 
+	aImages 						= 		null 
 	
 //--------------------- Object Entity---------------------- 
-	oRootEntity							= 		null 
+	oRootEntity						= 		null 
 	WhitePEntity 						= 		null 
 	BlackPEntity						= 		null 	
-	PieceEntity							= 		null  
-	BlackProPawnEntity			= 		null 	
-	WhiteProPawnEntity 			= 		null  
-	oProPawnEntity					= 		null 
-	PieceEntity 							= 		null 
+	PieceEntity						= 		null  
+	BlackProPawnEntity					= 		null 	
+	WhiteProPawnEntity 					= 		null  
+	oProPawnEntity						= 		null 
+	PieceEntity 						= 		null 
 	WhitePEntity 						= 		null 
 	BlackPEntity 						= 		null
-	ocameraentity 					= 		null
+	ocameraentity 						= 		null
 //------------------ Object Network---------------------
 	oClientSocket						 = 	null
-	oTcpServer							 = 	null
-	otcpSocket							 = 	null
+	oTcpServer						 = 	null
+	otcpSocket						 = 	null
 //--------------------- Object -----------------------------
-	Picker 									= 		null 
-	oWidget 								= 		null 	
-	aLight  								= 		null 	
-	oText3d 								= 		null   		 	
-	btn1 									= 		null 	
-	oLayout 								= 		null 	 			
-	piece 									= 		null  
+	Picker 							= 		null 
+	oWidget 						= 		null 	
+	aLight  						= 		null 	
+	oText3d 						= 		null   		 	
+	btn1 							= 		null 	
+	oLayout 						= 		null 	 			
+	piece 							= 		null  
 
 //-------------------- Object -------------------------------
-	oProPawn 							= 		null 	
+	oProPawn 					= 		null 	
 	oProPawnMaterial	 			= 		null 
 	oProPawnPicker	 				= 		null 
-	oProPawnTransform 			= 		null 
+	oProPawnTransform 				= 		null 
 	oProPawQuinW	 				= 		null 
  	oProPawQuinB	 				= 		null 
 	oProPawRookW	 				= 		null 
 	oProPawRookB	 				= 		null 
-	oProPawBishopW 				= 		null 
+	oProPawBishopW 					= 		null 
 	oProPawBishopB   				= 		null 
-	oProPawknightW 				= 		null 
+	oProPawknightW 					= 		null 
 	oProPawknightB 					= 		null 
-	Picker 	  	 							= 		null 
-	oboard	   								= 		null 
+	Picker 	  	 				= 		null 
+	oboard	   					= 		null 
 //-------------------- Object -----------------------------	
  	
- 	piece  									= 		null 
-	okingw  								= 		null 
-	okingb  								= 		null 
+ 	piece  								= 		null 
+	okingw  							= 		null 
+	okingb  							= 		null 
 	oqueenw  							= 		null 
 	oqueenb  							= 		null 
 	oBishopwr  							= 		null 
@@ -73,10 +73,10 @@
  	oknightwl  							= 		null 
 	oknightbr  							= 		null 
 	oknightbl  							= 		null 
-	orookwr 	 							= 		null 
-	orookwl 	 							= 		null 
-	orookbr 	 							= 		null 
-	orookbl 	 							= 		null 
+	orookwr 	 						= 		null 
+	orookwl 	 						= 		null 
+	orookbr 	 						= 		null 
+	orookbl 	 						= 		null 
 	opawnw1  							= 		null 
 	opawnw2  							= 		null 
 	opawnw3  							= 		null 
@@ -96,45 +96,45 @@
 	
 
 //------------------ Var intiger--------------------------------
- 	nTabs = 0
-	nIndex =1   
-    VisionLevel=0	
-    CamraMenuelaAngle = 0
-    kingI = 0
-    kingJ = 0
-    selectionI = 0
-    selectionJ = 0
-    degreeW = 270      
-    degreeB = 90    
-    motionLastX = 0  
-    motionLastY = 0
-	Camangle =0  
-	TILE_SIZE    = 17
-	myTime        = 0
-    yourTime      = 0
-	whiteAdvantage = 0
+ 	    nTabs = 0
+	    nIndex =1   
+	    VisionLevel=0	
+	    CamraMenuelaAngle = 0
+	    kingI = 0
+	    kingJ = 0
+	    selectionI = 0
+	    selectionJ = 0
+	    degreeW = 270      
+	    degreeB = 90    
+	    motionLastX = 0  
+	    motionLastY = 0
+	    Camangle =0  
+	    TILE_SIZE    = 17
+	    myTime        = 0
+            yourTime      = 0
+	    whiteAdvantage = 0
 //---------------- Var Logic----------------------------------
-	CamraMenuelaAngle=false
-    Camturn						=false
-    DrawPromotionPawn = false
-    DisplayView					= false 
+    CamraMenuelaAngle			=false
+    Camturn				=false
+    DrawPromotionPawn 			= false
+    DisplayView				= false 
     mouseRightClick			 =false 
-    isOngame     				= false   
-    networkMode 				= false 
-    myCheck    				    = false
-    yourCheck    				= false
-	PLAY_VS_HUMAN 		= true
-	PLAY_ON_LINE 			= false
-	PLAY_VS_AI 				= false
-	isTurnWhite 				= false
-	
+    isOngame     			= false   
+    networkMode 			= false 
+    myCheck    				= false
+    yourCheck    			= false
+    PLAY_VS_HUMAN 			= true
+     PLAY_ON_LINE 			= false
+     PLAY_VS_AI 			= false
+    isTurnWhite 			= false
+
 //-------------- Var Strings---------------------------
 	
 	TurnAI            = "AI"
-	OppositeTurn = ""
-    TurnWhite       = "W"    
-	TurnBlack       = "B"
-    currentTurn  	= ""
+	OppositeTurn	  = ""
+    	TurnWhite         = "W"    
+	TurnBlack         = "B"
+        currentTurn   	  = ""
 
 	 MSG_WELCOME = "
          Welcome to the game  cheess developed in the Ring language,
@@ -153,18 +153,18 @@
 
 //------------------- Var Lists---------------------------------------------
 
-	aOppositeTurn			=    [ TurnWhite , TurnBlack ]
-	 aCommand				=    []
-	LegalMove					 =null
-	LegalMoves                  =    []
-	AiBestMove                  =    null
-	omove                          =    null
-	LastMove						 =		null
-	list_History_all_moves =    []
+	aOppositeTurn		 =    [ TurnWhite , TurnBlack ]
+	 aCommand		 =    []
+	LegalMove		 =   null
+	LegalMoves               =    []
+	AiBestMove               =    null
+	omove                    =    null
+	LastMove		 =    null
+	list_History_all_moves   =    []
     list_all_moves               =   []
-	aProPawn					 =		list(4)
-    board							 =		list(8,8)
-    aTile 							 = 	list(8,8)
+	aProPawn		 =		list(4)
+    board			 =		list(8,8)
+    aTile 			 = 	list(8,8)
     StartBoard = [
             ['rr', 'nr', 'br', 'kr', 'qr', 'bl', 'nl', 'rl'],
             ['p8', 'p7', 'p6', 'p5', 'p4', 'p3', 'p2', 'p1'],
