@@ -7,13 +7,7 @@
 Load "DisplayGameView.ring"
 
 
-/*if IsMainSourceFile() 
-	oApp = new QApp {
-		StyleFusion()
-		openWindow(:DisplayGameController)
-		exec()
-		}
-ok*/
+
 
 class DisplayGameController from windowsControllerParent
 			
