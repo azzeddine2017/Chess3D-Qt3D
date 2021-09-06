@@ -1,20 +1,21 @@
 
 
-# Chess3d-Qt3D
-## Chess 3D game in Ring language 
-### Special thanks to Mr. Bert Mariani and Mr. Mahmoud Samir Fayed
+
 Chess 3D (Qt3D Sample)
 ======================
 
-* Posted: 22 July 2021
-
-* Date last Updated: 3 August 2021
 
 * Developer: Azzedine Ramal (https://github.com/azzeddine2017/Chess3d-Qt3D)
 
 # Introduction 
 
 Chess 3D is an example about using Qt3D 
+
+* We can play against someone
+
+* We can play against the machine
+
+* We can play online ( under development )
 
 * We can move the board
 
