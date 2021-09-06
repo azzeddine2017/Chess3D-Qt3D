@@ -1582,7 +1582,60 @@ func getLegalAttackMove( isTurnWhite)
 							? len(BestAdvMoves)
 			 if len( AttakMove) = 0 return BestAdvMoves else  return AttakMove  ok
 						
-					
+
+/*
+
+//-----------------------------------
+func getLegalMoves(move, isTurnAI ) 
+				fromI = move.fromI
+				fromJ = move.fromJ
+				toI  =  move.toi
+				toJ   = move.toj
+				moves=[]
+				for i=1 to 8
+					 for j=1 to 8
+						if validMove(Board , fromI , fromJ , i , j  , isTurnAI)
+							getMove = getLastMove() 
+							moves + getMove
+						ok
+
+					next
+				next
+
+				return moves
+
+//--------------------------------------
+func getLegalMove( isTurnAI) 
+			Gmoves=[]	
+			moves=[]
+			getMove = new move 
+			for i=1 to 8
+				for j=1 to 8
+					if Board[i][j] != ' '  and  ((isWhitepiece(Board[i][j]) = isTurnAI)  or  (!isTurnAI =isBlackpiece(Board[i][j]) ))
+						fromn=i     fromk=j
+						if validMove(Board ,fromn , fromk  , i , j , isTurnAI) 
+
+							getMove.fromI = fromn
+							getMove.fromJ = fromk
+							getMove.Toi = i
+							getMove.Toj = j	
+							Gmoves + getMove
+
+						ok	
+					ok			
+				next
+			next
+			//?"moves:" +len(moves	)
+		   //	? moves
+		
+		?"Gmoves:" +len(Gmoves	)
+		//? Gmoves	
+		return Gmoves
+
+
+*/
+
+
 class   Move 
 
 					Fromi 
