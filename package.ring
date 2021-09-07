@@ -33,7 +33,6 @@ aPackageInfo = [
 		"DisplayGameController.ring",
 		"DisplayGameView.ring",
 		"Globale.ring",
-		"Manager1.ring",
 		"MinimaxTree.ring",
 		"Model3d.ring",
 		"models/bishop.obj",
