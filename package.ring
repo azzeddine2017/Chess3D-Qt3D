@@ -11,7 +11,7 @@ aPackageInfo = [
 	:versions = 	[
 		[
 			:version = "1.1.0",
-			:branch = "master"
+			:branch = "main"
 		]
 	],
 	:libs = 	[
@@ -141,7 +141,7 @@ aPackageInfo = [
 	:ubunturemove = "",
 	:fedoraremove = "",
 	:remotefolder = "Chess3D-Qt3D",
-	:branch = "master",
+	:branch = "main",
 	:providerusername = "azzeddine2017",
 	:providerwebsite = "github.com"
 ]
