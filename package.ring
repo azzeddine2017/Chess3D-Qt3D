@@ -139,5 +139,9 @@ aPackageInfo = [
 	:linuxremove = "",
 	:macosremove = "",
 	:ubunturemove = "",
-	:fedoraremove = ""
+	:fedoraremove = "",
+	:remotefolder = "Chess3d-Qt3D",
+	:branch = "master",
+	:providerusername = "azzeddine2017",
+	:providerwebsite = "github.com"
 ]
