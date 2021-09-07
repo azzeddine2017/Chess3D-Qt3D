@@ -15,6 +15,7 @@ Class Model3d
 
 						MEntity
 						Entity 
+						
 						Model 
 						Path
 						Transform
@@ -33,12 +34,14 @@ Class Model3d
 					Model.setsource(new qURL("file:///"+currentdir()+"/" + path) ) 
 					TextureLoader = new  QTextureLoader(Model)
 					TextureMaterial = new QTextureMaterial(Model)
+					
 					Transform = new  QTransform(Model){
 											setScale3D(new QVector3D(0.2, 0.2, 0.2))
 											setTranslation(new QVector3D(0, 0, 0))
 											}
 					MEntity = new QEntity(Entity)
 					MEntity.addComponent(Model)
+					
 					MEntity.addComponent(TextureMaterial)
 					MEntity.addComponent(Transform)
 
@@ -54,9 +57,8 @@ Class Model3d
 							
 					TextureLoader.setSource(new QUrl("file:///"+currentdir()+"/"+Path ) )
 					TextureMaterial.setTexture(TextureLoader)
-
-				
-
+		//--------------------------------
+		
 		//--------------------------------
 		func SetModelSiz(Sizx, Sizy, Sizz)
 	

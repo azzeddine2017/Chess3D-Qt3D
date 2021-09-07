@@ -23,8 +23,8 @@ func DrowSkyBox(RootEntity , Path , negx , negy , negz , posx , posy , posz )
 						setmeshresolution(new qSize(10,10))
 		                }
 			oskybox_negy_Transform = new  QTransform(oskybox_negy){
-									setScale(201)
-									setTranslation(new QVector3D(0, -800, 0))
+									setScale(1000)
+									setTranslation(new QVector3D(0, -7000, 0))
 									 oQ = new QQuaternion(0,0,0,0)
 									SetRotation(oQ.FromAxisAndAngle(new QVector3D(0, 1, 0), 180))
 									}
@@ -48,8 +48,8 @@ func DrowSkyBox(RootEntity , Path , negx , negy , negz , posx , posy , posz )
 						setmeshresolution(new qSize(10,10))
 		                }
 			oskybox_negx_Transform = new  QTransform(oskybox_negx){
-									setScale(201)
-									setTranslation(new QVector3D(-999, 200, 0))
+									setScale(1000)
+									setTranslation(new QVector3D(-4990, -2000, 0))
 									 oQ = new QQuaternion(0,0,0,0)
 									SetRotation(oQ.FromAxisAndAngle(new QVector3D(1, 1, 1), 240))
 									}
@@ -73,8 +73,8 @@ func DrowSkyBox(RootEntity , Path , negx , negy , negz , posx , posy , posz )
 						setmeshresolution(new qSize(10,10))
 		                }
 			skybox_negz_Transform = new  QTransform(skybox_negz){
-									setScale(201)
-									setTranslation(new QVector3D(0, 200, -999))
+									setScale(1000)
+									setTranslation(new QVector3D(0, -2000, -4990))
 									 oQ = new QQuaternion(0,0,0,0)
 									SetRotation(oQ.FromAxisAndAngle(new QVector3D(0, 1, 1),180))
 									}
@@ -98,8 +98,8 @@ func DrowSkyBox(RootEntity , Path , negx , negy , negz , posx , posy , posz )
 						setmeshresolution(new qSize(10,10))
 		                }
 			skybox_posx_Transform = new  QTransform(skybox_posx){
-									setScale(201)
-									setTranslation(new QVector3D(999, 200, 0))
+									setScale(1000)
+									setTranslation(new QVector3D(4990, -2000, 0))
 									 oQ = new QQuaternion(0,0,0,0)
 									SetRotation(oQ.FromAxisAndAngle(new QVector3D(-1, 1, 1), 120))
 									}
@@ -123,10 +123,10 @@ func DrowSkyBox(RootEntity , Path , negx , negy , negz , posx , posy , posz )
 						setmeshresolution(new qSize(10,10))
 		                }
 			skybox_posy_Transform = new  QTransform(skybox_posy){
-									setScale(201)
-									setTranslation(new QVector3D(0,1200, 0))
+									setScale(100)
+									setTranslation(new QVector3D(0,300, 0))
 									 oQ = new QQuaternion(0,0,0,0)
-									SetRotation(oQ.FromAxisAndAngle(new QVector3D(0, 0, 180), 180))
+									SetRotation(oQ.FromAxisAndAngle(new QVector3D(0, 0, 270), 180))
 									}
 			oTextureLoader = new  QTextureLoader(skybox_posy){
 									setSource(new QUrl("file:///"+currentdir() + "/" + Path +"/" +posy ) )
@@ -147,8 +147,8 @@ func DrowSkyBox(RootEntity , Path , negx , negy , negz , posx , posy , posz )
 									setmeshresolution(new qSize(10,10))
 					                }
 			skybox_posz_Transform = new  QTransform(skybox_posz){
-									setScale(201)
-									setTranslation(new QVector3D(-2.5, 200, 999))
+									setScale(1000)
+									setTranslation(new QVector3D(-2.5, -2000, 4990))
 									 oQ = new QQuaternion(0,0,0,0)
 									SetRotation(oQ.FromAxisAndAngle(new QVector3D(180, -0.1, -0.5), 270))
 									}

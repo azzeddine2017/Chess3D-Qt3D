@@ -98,11 +98,7 @@ Class Text3D
 							Transform.setTranslation(new QVector3D( TextposX, TextposY, TextposZ))
 							
 						 ok
-						 if Text3D != " "
-								
-										SayText(Text3D)
-										
-						ok
+						
 						 
 						
 					
