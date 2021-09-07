@@ -1,8 +1,8 @@
 
 aPackageInfo = [
-	:name = "The Chess3d-Qt3D Package",
-	:description = "Our Chess3d-Qt3D package using the Ring programming language",
-	:folder = "",
+	:name = "The Chess3D-Qt3D Package",
+	:description = "Our Chess3D-Qt3D package using the Ring programming language",
+	:folder = "Chess3D-Qt3D",
 	:developer = "Azzeddine Remmal",
 	:email = "Azzeddine.Remmal@gmail.com",
 	:license = "MIT License",
@@ -140,7 +140,7 @@ aPackageInfo = [
 	:macosremove = "",
 	:ubunturemove = "",
 	:fedoraremove = "",
-	:remotefolder = "Chess3d-Qt3D",
+	:remotefolder = "Chess3D-Qt3D",
 	:branch = "master",
 	:providerusername = "azzeddine2017",
 	:providerwebsite = "github.com"
