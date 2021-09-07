@@ -1,7 +1,7 @@
 aPackageInfo = [
-	:name = "The Chess3d-Qt3D-2 Package",
-	:description = "Our Chess3d-Qt3D-2 package using the Ring programming language",
-	:folder = "Chess3d-Qt3D-2",
+	:name = "The Chess3d-Qt3D Package",
+	:description = "Our Chess3d-Qt3D package using the Ring programming language",
+	:folder = "Chess3d-Qt3D",
 	:developer = "",
 	:email = "",
 	:license = "MIT License",
