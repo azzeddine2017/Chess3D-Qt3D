@@ -1,9 +1,10 @@
+
 aPackageInfo = [
-	:name = "The Chess3D-Qt3D Package",
+	:name = "The Chess3d-Qt3D Package",
 	:description = "Our Chess3d-Qt3D package using the Ring programming language",
 	:folder = "Chess3d-Qt3D",
-	:developer = "Azzeddine remmal",
-	:email = "azzeddine.remmal@gmail.com",
+	:developer = "Azzeddine Remmal",
+	:email = "Azzeddine.Remmal@gmail.com",
 	:license = "MIT License",
 	:version = "1.1.0",
 	:ringversion = "1.14",
@@ -15,9 +16,14 @@ aPackageInfo = [
 	],
 	:libs = 	[
 		[
-			:name = "",
-			:version = "",
-			:providerusername = ""
+			:name = "ringqt",
+			:version = "1.0.8",
+			:providerusername = "ringpackages"
+		],
+		[
+			:name = "stdlib",
+			:version = "1.0.0",
+			:providerusername = "ringpackages"
 		]
 	],
 	:files = 	[
