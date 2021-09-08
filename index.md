@@ -1,37 +1,39 @@
-## Welcome to GitHub Pages
+Chess 3D (Qt3D Sample)
+======================
 
-You can use the [editor on GitHub](https://github.com/azzeddine2017/Chess3D-Qt3D/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+* Developer: Azzeddine Remmal (https://github.com/azzeddine2017/Chess3d-Qt3D)
 
-### Markdown
+# Introduction 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Chess 3D is an example about using Qt3D 
 
-```markdown
-Syntax highlighted code block
+* We can play against someone
 
-# Header 1
-## Header 2
-### Header 3
+* We can play against the machine
 
-- Bulleted
-- List
+* We can play online ( under development )
 
-1. Numbered
-2. List
+* We can move the board
 
-**Bold** and _Italic_ and `Code` text
+* Select a Piece and move it
 
-[Link](url) and ![Image](src)
-```
+* Castle - King Rook side
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+* En-Passant capture 
 
-### Jekyll Themes
+* Pawn promotion to Queen
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/azzeddine2017/Chess3D-Qt3D/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+# Install
 
-### Support or Contact
+We can install it using the Ring Package Manager
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+	ringpm install Chess3D-Qt3D from Azzeddine2017
+	ringpm run Chess3D-Qt3D
+
+# Screen Shots
+![screenshot_16_08_2021_19_13_13](https://user-images.githubusercontent.com/31375681/130539743-ed851c80-3d3e-439b-9865-5165c3d3ad35.png)
+![screenshot_16_08_2021_19_13_50](https://user-images.githubusercontent.com/31375681/130539769-c8608d0e-973a-47bf-9710-c11b7c065f76.png)
+![screenshot_14_08_2021_16_54_32](https://user-images.githubusercontent.com/31375681/130539811-6f604a08-711c-4c16-b40a-d399f2ad457f.png)
+![screenshot_29_07_2021_19_07_14](https://user-images.githubusercontent.com/31375681/130539958-1c729e5f-8259-412b-8ea9-b9074953a225.png)
+
