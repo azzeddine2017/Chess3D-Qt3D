@@ -31,7 +31,7 @@ Chess 3D is an example about using Qt3D
 
 We can install it using the Ring Package Manager
 
-	ringpm install Chess3D-Qt3D
+	ringpm install Chess3D-Qt3D from Azzeddine2017
 	ringpm run Chess3D-Qt3D
 
 # Screen Shots
