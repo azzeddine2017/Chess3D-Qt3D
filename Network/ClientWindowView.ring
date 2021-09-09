@@ -22,7 +22,7 @@ Class ClientWindowView from WindowsViewParent
 		
            		 Win = new  MainWindow() { 
 								setWindowTitle("Create the connection")
- 						setstylesheet ( "color: # 28ff02؛" ) // setstylesheet ( "color: # 28ff02؛ background-image: url (C: / ring / game engine / qt_3d_chess / Qt3d_chess_core / textures / SpaceLightblue.png)؛" )								setgeometry(0,0,457,201)
+ 						setstylesheet ( "color: # 28ff02;") // setstylesheet ( "color: # 28ff02؛ background-image: url (C: / ring / game engine / qt_3d_chess / Qt3d_chess_core / textures / SpaceLightblue.png)؛" )								setgeometry(0,0,457,201)
 								setLayout(Layout1)
 								show()
 						Label1 = new Qlabel(Win) {
