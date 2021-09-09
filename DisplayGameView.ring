@@ -23,8 +23,8 @@ class DisplayGameView from WindowsViewParent
 
 
 	    win  =  new QMainwindow() { 
-				 setwindowtitle("Using Qt3D - Chees_3D_2")
-				 setstylesheet("color:white;background-image: url(C:/ring/game engine/qt_3d_chess/Qt3d_chess_core/textures/SpaceLightblue.png);")
+				 setwindowtitle("Using Qt3D - Chees_3D")
+				  setstylesheet("color:white;) //setstylesheet("color:white;background-image: url(C:/ring/game engine/qt_3d_chess/Qt3d_chess_core/textures/SpaceLightblue.png);")
 	  			 resize(1100,600)
 				 showmaximized()		
 
