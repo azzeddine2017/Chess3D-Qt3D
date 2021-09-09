@@ -19,7 +19,7 @@ ok
 
 class DisplayGameView from WindowsViewParent
 
-//class DisplayGameView 
+
 
 
 	    win  =  new QMainwindow() { 
