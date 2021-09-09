@@ -24,7 +24,7 @@ Class  ServerWindowView  from  WindowsViewParent
 
 					 Win = new  MainWindow() {  
 								setWindowTitle("Connecting...")
-		                        setstylesheet("color:#28ff02;")  // setstylesheet("color:#28ff02;background-image: url(C:/ring/game engine/qt_3d_chess/Qt3d_chess_core/textures/SpaceLightblue.png);")
+		                        			setstylesheet("color:#28ff02;background: #194a38;")  
 								setgeometry(0,250,457,201)
 								setLayout(Layout1)
 								show()
