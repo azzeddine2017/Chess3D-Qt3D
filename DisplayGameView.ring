@@ -24,7 +24,7 @@ class DisplayGameView from WindowsViewParent
 
 	    win  =  new QMainwindow() { 
 				 setwindowtitle("Using Qt3D - Chees_3D")
-				  setstylesheet("color:white;") //setstylesheet("color:white;background-image: url(C:/ring/game engine/qt_3d_chess/Qt3d_chess_core/textures/SpaceLightblue.png);")
+				  setstylesheet("color:#28ff02;background: #194a38;")
 	  			 resize(1100,600)
 				 showmaximized()		
 
@@ -58,7 +58,7 @@ class DisplayGameView from WindowsViewParent
 		yourLCD = new Qlcdnumber(win) {
 			move(0,15)
 			resize(44,16)
-			setstylesheet("color:#28ff02;background-color:#e2e5ff;")
+			setstylesheet("color:#28ff02;background: #194a38;")
 			oFont = new Qfont("",0,0,0)
 			oFont.fromstring("Arial,30,-1,5,87,0,0,0,0,0,Black")
 			setfont(oFont)
@@ -68,7 +68,7 @@ class DisplayGameView from WindowsViewParent
 		RadioButton = new Qradiobutton(win) {
 			move(0,55)
 			resize(101,35)
-			setstylesheet("color:#28ff02;background-color:#e2e5ff;")
+			setstylesheet("color:#28ff02;background: #194a38;")
 			oFont = new Qfont("",0,0,0)
 			oFont.fromstring("Arial,16,-1,5,50,1,0,0,0,0,Italic")
 			setfont(oFont)
@@ -78,7 +78,7 @@ class DisplayGameView from WindowsViewParent
 		startButton = new Qpushbutton(win) {
 			move(0,111)
 			resize(80,21)
-			setstylesheet("color:#28ff02;background-color:#e2e5ff;")
+			setstylesheet("color:#28ff02;background: #194a38;")
 			oFont = new Qfont("",0,0,0)
 			oFont.fromstring("Arial,14,-1,5,50,1,0,0,0,0,Italic")
 			setfont(oFont)
@@ -90,7 +90,7 @@ class DisplayGameView from WindowsViewParent
 		newButton = new Qpushbutton(win) {
 			move(0,149)
 			resize(80,20)
-			setstylesheet("color:#28ff02;background-color:#e2e5ff;")
+			setstylesheet("color:#28ff02;background: #194a38;")
 			oFont = new Qfont("",0,0,0)
 			oFont.fromstring("Arial,14,-1,5,50,1,0,0,0,0,Italic")
 			setfont(oFont)
@@ -102,7 +102,7 @@ class DisplayGameView from WindowsViewParent
 		loadButton = new Qpushbutton(win) {
 			move(0,323)
 			resize(162,27)
-			setstylesheet("color:#28ff02;background-color:#e2e5ff;")
+			setstylesheet("color:#28ff02;background: #194a38;")
 			oFont = new Qfont("",0,0,0)
 			oFont.fromstring("Arial,14,-1,5,50,1,0,0,0,0,Italic")
 			setfont(oFont)
@@ -114,7 +114,7 @@ class DisplayGameView from WindowsViewParent
 		saveButton = new Qpushbutton(win) {
 			move(0,278)
 			resize(142,22)
-			setstylesheet("color:#28ff02;background-color:#e2e5ff;")
+			setstylesheet("color:#28ff02;background: #194a38;")
 			oFont = new Qfont("",0,0,0)
 			oFont.fromstring("Arial,14,-1,5,50,1,0,0,0,0,Italic")
 			setfont(oFont)
@@ -126,7 +126,7 @@ class DisplayGameView from WindowsViewParent
 		resignButton = new Qpushbutton(win) {
 			move(0,232)
 			resize(80,22)
-			setstylesheet("color:#28ff02;background-color:#e2e5ff;")
+			setstylesheet("color:#28ff02;background: #194a38;")
 			oFont = new Qfont("",0,0,0)
 			oFont.fromstring("Arial,14,-1,5,50,1,0,0,0,0,Italic")
 			setfont(oFont)
@@ -138,7 +138,7 @@ class DisplayGameView from WindowsViewParent
 		cleerButton = new Qpushbutton(win) {
 			move(0,183)
 			resize(80,22)
-			setstylesheet("color:#28ff02;background-color:#e2e5ff;")
+			setstylesheet("color:#28ff02;background: #194a38;")
 			oFont = new Qfont("",0,0,0)
 			oFont.fromstring("Arial,14,-1,5,50,1,0,0,0,0,Italic")
 			setfont(oFont)
@@ -150,7 +150,7 @@ class DisplayGameView from WindowsViewParent
 		myLCD = new Qlcdnumber(win) {
 			move(0,371)
 			resize(42,29)
-			setstylesheet("color:#28ff02;background-color:#e2e5ff;")
+			setstylesheet("color:#28ff02;background: #194a38;")
 			oFont = new Qfont("",0,0,0)
 			oFont.fromstring("Arial,30,-1,5,87,0,0,0,0,0,Black")
 			setfont(oFont)
@@ -160,7 +160,7 @@ class DisplayGameView from WindowsViewParent
 		RadioButton_2 = new Qradiobutton(win) {
 			move(0,416)
 			resize(80,33)
-			setstylesheet("color:#28ff02;background-color:#e2e5ff;")
+			setstylesheet("color:#28ff02;background: #194a38;")
 			oFont = new Qfont("",0,0,0)
 			oFont.fromstring("Arial,16,-1,5,50,1,0,0,0,0,Italic")
 			setfont(oFont)
@@ -170,7 +170,7 @@ class DisplayGameView from WindowsViewParent
 		VS_HUMAN_Button = new Qpushbutton(oMenuWidget) {
 			move(0,371)
 			resize(42,29)
-			setstylesheet("color:#28ff02;background-color:#e2e5ff;")
+			setstylesheet("color:#28ff02;background: #194a38;")
 			setClickEvent(method(:PLAY_VS_HUMAN))
 			oImage = new Qpixmap(currentdir()+"/textures/PLAY_VS_HUMAN.png") 
 			nImageWidth	 = oImage.Width()		 
@@ -182,7 +182,7 @@ class DisplayGameView from WindowsViewParent
 		ON_LINE_Button = new Qpushbutton(oMenuWidget) {
 			move(0,371)
 			resize(42,29)
-			setstylesheet("color:#28ff02;background-color:#e2e5ff;")
+			setstylesheet("color:#28ff02;background: #194a38;")
 			setClickEvent(method(:PLAY_ON_LINE))
 			oImage = new Qpixmap(currentdir()+"/textures/PLAY_ON_LINE.png")	 
 			nImageWidth	 = oImage.Width()		
@@ -194,7 +194,7 @@ class DisplayGameView from WindowsViewParent
 		VS_AI_Button = new Qpushbutton(oMenuWidget) {
 			move(0,371)
 			resize(42,29)
-			setstylesheet("color:#28ff02;background-color:#e2e5ff;")
+			setstylesheet("color:#28ff02;background: #194a38;")
 			setClickEvent(method(:PLAY_VS_AI))
 			oImage = new Qpixmap(currentdir()+"/textures/PLAY_VS_AI.png")	 
 			nImageWidth	 = oImage.Width()		 
@@ -207,7 +207,7 @@ class DisplayGameView from WindowsViewParent
 		PlayHistoryButton = new Qpushbutton(win) {
 			move(0,183)
 			resize(80,22)
-			setstylesheet("color:#28ff02;background-color:#e2e5ff;")
+			setstylesheet("color:#28ff02;background: #194a38;")
 			oFont = new Qfont("",0,0,0)
 			oFont.fromstring("Arial,14,-1,5,50,1,0,0,0,0,Italic")
 			setfont(oFont)
@@ -219,7 +219,7 @@ class DisplayGameView from WindowsViewParent
 		ScreenShotButton = new Qpushbutton(win) {
 			move(0,278)
 			resize(142,22)
-			setstylesheet("color:#28ff02;background-color:#e2e5ff;")
+			setstylesheet("color:#28ff02;background: #194a38;")
 			oFont = new Qfont("",0,0,0)
 			oFont.fromstring("Arial,14,-1,5,50,1,0,0,0,0,Italic")
 			setfont(oFont)
@@ -231,7 +231,7 @@ class DisplayGameView from WindowsViewParent
 		clientButton = new Qpushbutton(win) {
 			move(0,278)
 			resize(142,22)
-			setstylesheet("color:#28ff02;background-color:#e2e5ff;")
+			setstylesheet("color:#28ff02;background: #194a38;")
 			oFont = new Qfont("",0,0,0)
 			oFont.fromstring("Arial,14,-1,5,50,1,0,0,0,0,Italic")
 			setfont(oFont)
@@ -243,7 +243,7 @@ class DisplayGameView from WindowsViewParent
 		serverButton = new Qpushbutton(win){
 			move(0,278)
 			resize(142,22)
-			setstylesheet("color:#28ff02;background-color:#e2e5ff;")
+			setstylesheet("color:#28ff02;background: #194a38;")
 			oFont = new Qfont("",0,0,0)
 			oFont.fromstring("Arial,14,-1,5,50,1,0,0,0,0,Italic")
 			setfont(oFont)
@@ -255,7 +255,7 @@ class DisplayGameView from WindowsViewParent
 		Slider1 = new Qslider(win) {
 			move(46,143)
 			resize(90,31)
-			setstylesheet("color:#28ff02;background-color:#e2e5ff;")
+			setstylesheet("color:#28ff02;background: #194a38;")
 			setvalue(20)
 			setOrientation(1)
 			setMinimum(0)
@@ -264,7 +264,7 @@ class DisplayGameView from WindowsViewParent
 		GameMusicButton = new Qpushbutton(win){
 			move(0,278)
 			resize(142,22)
-			setstylesheet("color:#28ff02;background-color:#e2e5ff;")
+			setstylesheet("color:#28ff02;background: #194a38;")
 			oFont = new Qfont("",0,0,0)
 			oFont.fromstring("Arial,14,-1,5,50,1,0,0,0,0,Italic")
 			setfont(oFont)
