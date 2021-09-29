@@ -1,12 +1,12 @@
-Chess 3D (Qt3D Sample)
-======================
+Chess 3D
+========
 
 
 * Developer: Azzeddine Remmal - Algeria - 
 
 # Introduction 
 
-Chess 3D is an example about using Qt3D 
+Chess 3D  using Qt3D 
 
 * We can play against someone
 
