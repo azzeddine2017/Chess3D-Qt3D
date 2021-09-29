@@ -2,7 +2,7 @@ Chess 3D (Qt3D Sample)
 ======================
 
 
-* Developer: Azzeddine Remmal (https://github.com/azzeddine2017/Chess3d-Qt3D)
+* Developer: Azzeddine Remmal - Algeria - 
 
 # Introduction 
 
