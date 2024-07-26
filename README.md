@@ -2,7 +2,7 @@ Chess 3D
 ========
 
 
-* Developer: Azzeddine Remmal - Algeria - 
+* Developer: Azzeddine Remmal 
 
 # Introduction 
 
